@@ -1,0 +1,77 @@
+.wrapper + .menu{
+    display: none;
+}
+
+.wrapper {
+    background-image: url('../images/sand.jpg');
+    height: 100vh;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'roboto';  
+    overflow: hidden; 
+}
+
+.main-block {
+    height: 400px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-color: rgba(#fff, .3);
+    border-radius: 10px 10px 0 0;
+}
+
+.main-block__pic {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: 50%, 50%;
+    border-radius: 50%;
+}
+
+.main-block__title {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.main-block__text {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+// .nav-block {
+//     position: absolute;
+//     bottom: 0;
+// }
+
+.nav-block__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-block__item {
+    a {
+        flex: 1 1 auto;
+        display: inline-block;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+}
+
+.copyright__list{
+    display: flex;
+    justify-content: center;
+}

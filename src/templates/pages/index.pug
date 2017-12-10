@@ -4,22 +4,26 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-    .main-block
-        .main-block__img
-            img.main-block__pic(style="background-image: url(assets/images/photo.jpg);")    
-        h1.main-block__title Мария Молчанова
-        .main-block__text Личный сайт веб разработчика
-        div.main-block-socials.socials
-            .socials__ico
-            .socials__ico
-            .socials__ico
-        nav.nav-block
-            ul.nav-block__list
-                li.nav-block__item Мои работы
-                li.nav-block__item Обо мне
-                li.nav-block__item Блог
-    .copyright
-        ul.copyright__list
-            li.copyright__item Мария Молчанова
-            li.copyright__item создано с любовью в LoftSchool
-            li.copyright__item 2018
+    .wrapper
+        .main-block
+            .main-block__img
+                img.main-block__pic(style="background-image: url(assets/images/photo.jpg);")    
+            h1.main-block__title Мария Молчанова
+            .main-block__text Личный сайт веб разработчика
+            div.main-block-socials.socials
+                .socials__ico
+                .socials__ico
+                .socials__ico
+            nav.nav-block
+                ul.nav-block__list
+                    li.nav-block__item 
+                        a(href="./my-works.html") Мои работы
+                    li.nav-block__item
+                        a(href="./about.html") Обо мне
+                    li.nav-block__item
+                        a(href="./blog.html") Блог
+        .copyright
+            ul.copyright__list
+                li.copyright__item &copy; Владимир Астахов
+                li.copyright__item создано с любовью в LoftSchool
+                li.copyright__item 2016
