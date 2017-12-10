@@ -9,6 +9,10 @@ const del = require('del');
 
 const browserSync = require('browser-sync').create();
 
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+
 const paths = {
     root: './build',
     templates: {
@@ -22,6 +26,10 @@ const paths = {
     images: {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
+    },
+    scripts: {
+        src: 'src/scripts/**/*.js',
+        dest: 'build/assets/scripts/'
     }
 }
 
@@ -61,12 +69,18 @@ function images() {
         .pipe(gulp.dest(paths.images.dest));
 }
 
+function scripts() {
+    return gulp.src('src/scripts/app.js')
+        .pipe(gulpWebpack(webpackConfig, webpack))
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images),
+    gulp.parallel(styles, templates, images, scripts),
     gulp.parallel(watch, server)
 ));

@@ -1,9 +1,11 @@
 {
   "name": "s-p",
   "version": "1.0.0",
-  "description": "",
+  "description": "Выпускной проект для LoftSchool",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
@@ -12,12 +14,22 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
-    "jquery": "^3.2.1"
+    "gulp-webpack": "^1.5.0",
+    "jquery": "^3.2.1",
+    "uglifyjs-webpack-plugin": "^1.1.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmolchanova/site-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mmolchanova/site-portfolio/issues"
+  },
+  "homepage": "https://github.com/mmolchanova/site-portfolio#readme"
 }
