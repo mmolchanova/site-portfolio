@@ -10,8 +10,6 @@
 
 **Курс**: Продвинутая веб разработка (12.2017)
 
-**Сайт**: https://mmolchanova.github.io/site-portfolio/build/index.html
-
 -------
 
 ## Для работы должны быть установлены 
