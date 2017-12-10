@@ -55,6 +55,8 @@ function clean() {
 function watch() {
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.styles.src, images);
+    gulp.watch(paths.styles.src, scripts);
 }
 
 function server() {
@@ -78,6 +80,7 @@ function scripts() {
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
+exports.images = images;
 
 gulp.task('default', gulp.series(
     clean,
