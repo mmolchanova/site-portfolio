@@ -17,11 +17,10 @@
 }
 
 .main-block {
-    height: 400px;
+    min-height: 395px;
     width: 380px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
     position: relative;
     background-color: rgba(#fff, .3);
@@ -29,27 +28,34 @@
 }
 
 .main-block__pic {
-    height: 150px;
-    width: 150px;
+    height: 142px;
+    width: 142px;
     background-size: cover;
     background-position: 50%, 50%;
     border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 
 .main-block__title {
     font-weight: 500;
-    font-size: 35px;
+    font-size: 28px;
 }
 
 .main-block__text {
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.5;
 }
 
-// .nav-block {
-//     position: absolute;
-//     bottom: 0;
-// }
+.nav-block {
+    position: absolute;
+    bottom: 0;
+    // width: 100%;
+    // min-width: 100%;
+    max-width: 100%;
+    background-color: #e7a831;
+}
 
 .nav-block__list {
     display: flex;
@@ -58,12 +64,46 @@
 }
 
 .nav-block__item {
+    border: 0px;
+    border-left: 2px solid #fff; 
     a {
         flex: 1 1 auto;
         display: inline-block;
         text-decoration: none;
-        padding: 10px;
+        color: #fff;
+        background-color: #e7a831;
+        font: 400 16px 'roboto';
+        padding: 11px 31px;
+        height: 100%;
     }
+    a:hover {
+        background-color: #cc8820;
+        transition: .5s;
+    }
+    &:first-child {
+        border: 0px;
+    }
+}
+
+.authorization {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.authorization__btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        font: 400 16px 'roboto';
+        padding: 10px 25px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        &:hover {
+            background-color: #fff;
+            color: #cc8820;
+            transition: .5s;
+        }
 }
 
 .copyright {
@@ -74,4 +114,13 @@
 .copyright__list{
     display: flex;
     justify-content: center;
+}
+
+.copyright__item {
+    display: inline-block;
+    padding: 0 4px; 
+    border-left: 2px solid #fff; 
+    &:first-child {
+        border: 0px;
+    }
 }
