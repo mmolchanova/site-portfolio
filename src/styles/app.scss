@@ -1,6 +1,7 @@
 @import "node_modules/normalize.css/normalize";
-@import 'base.scss';
-@import 'fonts.scss';
-@import 'pages/index.scss';
+@import 'base';
+@import 'fonts';
+@import 'pages/index';
 @import 'common/menu';
+@import 'common/user';
 @import 'common/technologies';

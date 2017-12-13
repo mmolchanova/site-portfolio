@@ -2,30 +2,30 @@ extends ../template
 
 block variables
     - var title = 'Добро пожаловать'
+    - 
+        var nav = [
+            ['my-works', 'Мои работы'],
+            ['about', 'Обо мне'],
+            ['blog', 'Блог']
+        ]
 
 block content
     .wrapper
         .main-block
-            .main-block__img
-                img.main-block__pic(style="background-image: url(assets/images/photo.jpg);")    
-            h1.main-block__title Мария Молчанова
-            .main-block__text Личный сайт веб разработчика
-            div.main-block-socials.socials
-                .socials__ico
-                .socials__ico
-                .socials__ico
+            .main-block__info
+                include ../common/user.pug
+                ul.socials
+                    each item in ['vk', 'tw', 'in']
+                        li.socials__item
+                            a(href=`${item}`).socials__link
             nav.nav-block
                 ul.nav-block__list
-                    li.nav-block__item 
-                        a(href="./my-works.html") Мои работы
-                    li.nav-block__item
-                        a(href="./about.html") Обо мне
-                    li.nav-block__item
-                        a(href="./blog.html") Блог
+                    each item in nav
+                        li.nav-block__item 
+                            a(href="./"+item[0]+".html") #{item[1]}
         .authorization
             a.authorization__btn(href="#") Авторизоваться
         .copyright
             ul.copyright__list
-                li.copyright__item &copy; Владимир Астахов
-                li.copyright__item создано с любовью в LoftSchool
-                li.copyright__item 2016
+                each item in ['© Владимир Астахов', 'создано с любовью в LoftSchool', '2016']
+                    li.copyright__item #{item}

@@ -1,11 +1,14 @@
+- 
+    var menu__items = [
+        ['index', 'Главная'],
+        ['about', 'Обо мне'],
+        ['my-works', 'Мои работы'],
+        ['blog', 'Блог']
+    ]
+
 nav.menu
     h2 Меню
     ul.menu__list
-        li.menu__item
-            a(href="./index.html") Главная
-        li.menu__item
-            a(href="./about.html") Обо мне
-        li.menu__item
-            a(href="./my-works.html") Мои работы
-        li.menu__item
-            a(href="./blog.html") Блог
+        each item in menu__items
+            li.menu__item 
+                a(href="./"+item[0]+".html") #{item[1]}
