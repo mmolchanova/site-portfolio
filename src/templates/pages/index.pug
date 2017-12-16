@@ -13,11 +13,9 @@ block content
     .wrapper
         .main-block
             .main-block__info
-                include ../common/user.pug
-                ul.socials
-                    each item in ['vk', 'tw', 'in']
-                        li.socials__item
-                            a(href=`${item}`).socials__link
+                .main-block__user
+                    include ../common/user.pug
+                include ../common/socials.pug
             nav.nav-block
                 ul.nav-block__list
                     each item in nav

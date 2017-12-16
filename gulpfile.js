@@ -15,6 +15,10 @@ const webpackConfig = require('./webpack.config.js');
 
 const imagemin = require('gulp-imagemin');
 
+const svgSprite = require('gulp-svg-sprite');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+
 const paths = {
     root: './build',
     templates: {
@@ -36,8 +40,20 @@ const paths = {
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
+    },
+    sprite: {
+        src: 'src/icons/*.svg',
+        dest: 'build/assets/images/'
     }
 }
+
+const config = {
+    mode: {
+      symbol: {
+        sprite: "../sprite.svg"
+        }
+    }
+};
 
 function templates() {
     return gulp.src(paths.templates.pages)
@@ -63,6 +79,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.styles.src, images);
     gulp.watch(paths.styles.src, scripts);
+    gulp.watch(paths.sprite.src, sprite);
 }
 
 function server() {
@@ -89,13 +106,35 @@ function scripts() {
         .pipe(gulp.dest(paths.scripts.dest));
 }
 
+function sprite() {
+    return gulp.src(paths.sprite.src)
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    .pipe(cheerio({
+      run: function($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {
+        xmlMode: true
+      }
+    }))
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest(paths.sprite.dest));
+}
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.sprite = sprite;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, fonts, scripts),
+    gulp.parallel(styles, templates, images, fonts, scripts, sprite),
     gulp.parallel(watch, server)
 ));

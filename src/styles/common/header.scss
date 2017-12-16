@@ -1,0 +1,88 @@
+.header {
+    height: 600px;
+    width: 100%;
+    background-image: url('../images/sand.jpg');
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    z-index: -5;
+}
+
+.header__user {
+    z-index: 5;
+}
+
+.header__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.header__text {
+    fill: $rust;
+    fill-opacity: 0.2;
+    position: absolute;
+    top: 15%;
+  }
+
+.header__socials {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hamburger {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 25px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    &:hover {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+  
+    &:hover .hamburger-block__line {
+      height: 5px;
+      border-radius: 2.5px;
+      transition: 0.2s;
+    }
+  }
+
+  .hamburger-block {
+    position: relative;
+  }
+
+  .hamburger-block__line {
+    background-color: #fff;
+    display: block;
+    width: 25px;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+  }
+
+  .header__arrow {
+    fill: #fff;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill-opacity: 0.3;
+
+    &:hover {
+        transition: .5s;
+        fill-opacity: 1;
+        cursor: pointer;
+    }
+  }

@@ -1,7 +1,21 @@
+//config
+@import "config/variables";
+// @import "config/media";
+@import "config/adjustment";
+
 @import "node_modules/normalize.css/normalize";
+
+//layout
 @import 'base';
 @import 'fonts';
+
+//pages
 @import 'pages/index';
+@import 'pages/about';
+
+//commons
 @import 'common/menu';
 @import 'common/user';
+@import 'common/socials';
+@import 'common/header';
 @import 'common/technologies';

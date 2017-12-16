@@ -1,0 +1,20 @@
+.socials-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 140px;
+}
+
+.socials__item {
+    display: flex;
+}
+
+.socials__icon {
+    fill: #fff; 
+
+    &:hover {
+        transition: .5s;
+        fill: $rust;
+        cursor: pointer;
+    }
+}
