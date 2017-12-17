@@ -1,17 +1,21 @@
 //config
 @import "config/variables";
 // @import "config/media";
-@import "config/adjustment";
+@import 'config/mixins';
+
 
 @import "node_modules/normalize.css/normalize";
 
 //layout
 @import 'base';
 @import 'fonts';
+@import "adjustment";
 
 //pages
 @import 'pages/index';
 @import 'pages/about';
+@import 'pages/blog';
+@import 'pages/my-works';
 
 //commons
 @import 'common/menu';

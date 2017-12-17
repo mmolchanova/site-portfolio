@@ -1,0 +1,117 @@
+.works{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $dark;
+    height: 100%;
+    overflow: hidden;
+    font: 400 16px 'roboto';
+    background-color: $bg;
+}
+
+.works__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.works__block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-beige;
+}
+
+.works__desc {
+    display: inline-flex;
+    width: 70%;
+    justify-content: center;
+    color: $rust;
+    border-top: 1px solid #aeaeab;
+    border-bottom: 1px solid #aeaeab;
+    margin-bottom: 50px;
+}
+
+.works__button {
+    text-decoration: none;
+    color: #fff;
+    background-color: $yellow;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    
+    // &:before {
+    //     content: url('data:image/svg+xml;utf8, <svg 
+    //     xmlns="http://www.w3.org/2000/svg"
+    //     xmlns:xlink="http://www.w3.org/1999/xlink"
+    //     width="20px" height="20px" fill="#fff">
+    //     <use xlink:href="../images/sprite.svg#link" />
+    //    </svg>');
+    //     // width: 20px;
+    //     // height: 20px;
+    //     // fill: #fff;
+    // //    margin: 0 10px 10px 5px;
+    // }
+}
+
+.my-block {
+    width: 100%;
+    background-image: url('../images/desert2.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+    height: 100%;
+    overflow: hidden;
+}
+
+.reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reviews__list {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__item {
+    max-width: 370px;
+}
+
+.form__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 440px;
+}
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+  
+    &:focus {
+      outline: none;
+      border: 2px solid $yellow;
+    }
+}
+ 
+.form__textarea {
+    height: 110px;
+    resize: none;
+  }

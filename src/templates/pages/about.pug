@@ -12,31 +12,31 @@ block content
                 include ../common/user.pug
             svg.header__text(height="250")
                     use(xlink:href="assets/images/sprite.svg#about_header")
-        button.header__hamburger.hamburger(type="button")
-            span.hamburger__block
-                span.hamburger-block__line
-                span.hamburger-block__line
-                span.hamburger-block__line
+        button.header__hamburger(type="button")
+            svg.hamburger__ico(height="40" width="40")
+                    use(xlink:href="assets/images/sprite.svg#hamburger")
         svg.header__arrow(width="25" height="15")
             use(xlink:href="assets/images/sprite.svg#arrow_down")
         svg.triangle(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
-            polygon.triangle__left(points="0,0   0,86   500.8,86   500.8,75.5")
-            polygon.triangle__right(points="1000,0   1000,86   500,86   500,75.5")
+            polygon.triangle__part(points="0,0   0,86   500.8,86   500.8,75.5")
+            polygon.triangle__part.triangle__part--biege(points="1000,0   1000,86   500,86   500,75.5")
     .about
         .about__column.about__column--left
             .about__block
-                h1.about__title.title Обо мне
+                h1.about__title.title-dec Обо мне
             .about__block
                 .about__img 
-                    img.about__pic(style="background-image: url(assets/images/photo.jpg);")
-                h2.about__subtitle.subtitle Кто я
+                    img.about__pic(src="assets/images/photo.jpg")
+                h2.about__subtitle.subtitle-dec Кто я
                 .about__desc
                     p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                     p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         .about__column.about__column--right
             .about__block
-                h2.about__subtitle.subtitle Чем я могу быть вам полезна
+                h2.about__subtitle.subtitle-dec Чем я могу быть вам полезна
                 .about__desc Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
                 include ../common/technologies.pug
+    .map
+    .footer
 
                     

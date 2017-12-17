@@ -7,8 +7,8 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <div class="header">
@@ -31,7 +31,7 @@
       <div class="header__content">
         <div class="header__user">
           <div class="user">
-            <div class="user__img"><img class="user__pic" style="background-image: url(assets/images/photo.jpg);"></div>
+            <div class="user__img"><img class="user__pic" src="assets/images/photo.jpg"></div>
             <h1 class="user__title">Мария Молчанова</h1>
             <div class="user__info">Личный сайт веб разработчика</div>
           </div>
@@ -40,23 +40,27 @@
           <use xlink:href="assets/images/sprite.svg#about_header"></use>
         </svg>
       </div>
-      <button class="header__hamburger hamburger" type="button"><span class="hamburger__block"><span class="hamburger-block__line"></span><span class="hamburger-block__line"></span><span class="hamburger-block__line"></span></span></button>
+      <button class="header__hamburger" type="button">
+        <svg class="hamburger__ico" height="40" width="40">
+          <use xlink:href="assets/images/sprite.svg#hamburger"></use>
+        </svg>
+      </button>
       <svg class="header__arrow" width="25" height="15">
         <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
       </svg>
       <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-        <polygon class="triangle__left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
-        <polygon class="triangle__right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+        <polygon class="triangle__part" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+        <polygon class="triangle__part triangle__part--biege" points="1000,0   1000,86   500,86   500,75.5"></polygon>
       </svg>
     </div>
     <div class="about">
       <div class="about__column about__column--left">
         <div class="about__block">
-          <h1 class="about__title title">Обо мне</h1>
+          <h1 class="about__title title-dec">Обо мне</h1>
         </div>
         <div class="about__block">
-          <div class="about__img"> <img class="about__pic" style="background-image: url(assets/images/photo.jpg);"></div>
-          <h2 class="about__subtitle subtitle">Кто я</h2>
+          <div class="about__img"> <img class="about__pic" src="assets/images/photo.jpg"></div>
+          <h2 class="about__subtitle subtitle-dec">Кто я</h2>
           <div class="about__desc">
             <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
             <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
@@ -65,7 +69,7 @@
       </div>
       <div class="about__column about__column--right">
         <div class="about__block">
-          <h2 class="about__subtitle subtitle">Чем я могу быть вам полезна</h2>
+          <h2 class="about__subtitle subtitle-dec">Чем я могу быть вам полезна</h2>
           <div class="about__desc">Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.</div>
           <ul class="technologies">
             <li class="technologies__item">
@@ -163,6 +167,8 @@
         </div>
       </div>
     </div>
+    <div class="map"></div>
+    <div class="footer"></div>
     <nav class="menu">
       <h2>Меню</h2>
       <ul class="menu__list">

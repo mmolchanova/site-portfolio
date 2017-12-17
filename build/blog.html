@@ -7,46 +7,79 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <div class="header">
-      <div class="socials">
-        <div class="socials__ico"></div>
-        <div class="socials__ico"></div>
-        <div class="socials__ico"></div>
+    <div class="header header--min">
+      <div class="header__socials">
+        <ul class="socials-list">
+          <li class="socials__item"><a class="socials__link" href="vk">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="github">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="in">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
       </div>
-      <div class="general-block">
-        <div class="general-block__img"></div>
-        <h1 class="general-block__title title">Блог</h1>
-        <div class="general-block__description">Статьи, которые я написал</div>
+      <div class="header__content header__content--min">
+        <div class="header__user">
+          <div class="user">
+            <div class="user__img"><img class="user__pic" src="assets/images/photo.jpg"></div>
+            <h1 class="user__title--blog title-dec">Блог</h1>
+            <div class="user__info">Статьи, которые я написала (на самом деле нет)</div>
+          </div>
+        </div>
+        <svg class="header__text header__text--min" height="250">
+          <use xlink:href="assets/images/sprite.svg#blog_header"></use>
+        </svg>
       </div>
-      <div class="hamburger"></div>
+      <button class="header__hamburger" type="button">
+        <svg class="hamburger__ico" height="40" width="40">
+          <use xlink:href="assets/images/sprite.svg#hamburger"></use>
+        </svg>
+      </button>
+      <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="triangle__part" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+        <polygon class="triangle__part" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+      </svg>
     </div>
-    <div class="container">
-      <div class="content blog">
+    <div class="blog">
+      <div class="blog__nav nav-blog">
+        <ul class="nav-blog__list">
+          <li class="nav-blog__item"><a class="nav-blog__link" href="">Самое важное в SASS</a></li>
+          <li class="nav-blog__item"><a class="nav-blog__link" href="">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+          <li class="nav-blog__item"><a class="nav-blog__link" href="">Самый необходимый набор Gulp плагинов</a></li>
+          <li class="nav-blog__item"><a class="nav-blog__link" href="">Почему я выбрал Jade</a></li>
+        </ul>
+      </div>
+      <div class="blog__content">
         <ul class="blog__list">
           <li class="blog__item">
-            <div class="blog__title">Самое важное в SASS</div>
+            <h2 class="blog__title subtitle">Самое важное в SASS</h2>
             <div class="blog__data">22 ноября 2016</div>
             <div class="blog__desc">
               <div class="blog__desc-text">
                 <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
                 <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
               </div>
-              <div class="blog__desc-snippet"></div>
+              <div class="blog__desc-snippet"><img class="blog__desc-img" src="assets/images/snippet.jpg"></div>
             </div>
           </li>
           <li class="blog__item">
-            <div class="blog__title">Приёмы в вёрстке, без которых не обходится ни один сайт</div>
+            <h2 class="blog__title subtitle">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
             <div class="blog__data">13 ноября 2016</div>
             <div class="blog__desc">
               <div class="blog__desc-text">
                 <p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
                 <p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
               </div>
-              <div class="blog__desc-snippet"></div>
             </div>
           </li>
         </ul>

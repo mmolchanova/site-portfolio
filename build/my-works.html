@@ -7,10 +7,120 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="stylesheet" href="/assets/styles/app.min.css">
-    <script src="/assets/scripts/bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
+    <div class="header">
+      <div class="header__socials">
+        <ul class="socials-list">
+          <li class="socials__item"><a class="socials__link" href="vk">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#vk"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="github">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#github"></use>
+              </svg></a></li>
+          <li class="socials__item"><a class="socials__link" href="in">
+              <svg class="socials__icon" width="30" height="25">
+                <use xlink:href="assets/images/sprite.svg#in"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+      <div class="header__content">
+        <div class="header__user">
+          <div class="user">
+            <div class="user__img"><img class="user__pic" src="assets/images/photo.jpg"></div>
+            <h1 class="user__title">Мария Молчанова</h1>
+            <div class="user__info">Личный сайт веб разработчика</div>
+          </div>
+        </div>
+        <svg class="header__text" height="250">
+          <use xlink:href="assets/images/sprite.svg#portfolio_header"></use>
+        </svg>
+      </div>
+      <button class="header__hamburger" type="button">
+        <svg class="hamburger__ico" height="40" width="40">
+          <use xlink:href="assets/images/sprite.svg#hamburger"></use>
+        </svg>
+      </button>
+      <svg class="header__arrow" width="25" height="15">
+        <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
+      </svg>
+      <svg class="triangle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="triangle__part" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+        <polygon class="triangle__part" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+      </svg>
+    </div>
+    <div class="works"> 
+      <h1 class="works__title title-dec">Мои работы</h1>
+      <svg class="title-shaddow" height="250">
+        <use xlink:href="assets/images/sprite.svg#works_header"></use>
+      </svg>
+      <div class="works__content">
+        <div class="works__block">
+          <h2 class="works__subtitle subtitle-dec">Сайт школы онлайн образования</h2>
+          <div class="works__desc">HTML, CSS, JAVASCRIPT</div><a class="works__button" href="#">Посмотреть сайт</a>
+        </div>
+        <div class="works__main">
+          <div class="works__wrap">
+            <div class="works__sub"></div>
+            <div class="works__sub"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-block">
+      <h1 class="my-block__title title-dec">Что обо мне говорят</h1>
+      <svg class="title-shaddow title-shaddow--grey" height="250">
+        <use xlink:href="assets/images/sprite.svg#about_header"></use>
+      </svg>
+      <div class="reviews">
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__text">
+              <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+            </div>
+            <div class="reviews__author">
+              <div class="reviews__avatar"><img class="reviews__pic" src="assets/images/dima.jpg"></div>
+              <div class="reviews__info">
+                <div class="reviews__name">Ковальчук Дмитрий</div>
+                <div class="reviews__desc">основатель Loftschool</div>
+              </div>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__text">
+              <p>Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!</p>
+            </div>
+            <div class="reviews__author">
+              <div class="reviews__avatar"><img class="reviews__pic" src="assets/images/vova.jpg"></div>
+              <div class="reviews__info">
+                <div class="reviews__name">Сабанцев Владимир</div>
+                <div class="reviews__desc">преподаватель</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="form">
+          <form class="form__elem" action="server.php" method="post" id="contact-form">
+            <div class="form__wrap">
+              <div class="form__content">
+                <h2 class="form__subtitle subtitle-dec">Связаться со мной</h2>
+                <input class="form__input" type="text" id="name" name="name" placeholder="Имя">
+                <input class="form__input" type="email" id="email" name="email" placeholder="Email">
+                <textarea class="form__input form__textarea" name="comment" id="comment" placeholder="Ваше сообщение"></textarea>
+              </div>
+              <div class="form__btns">
+                <input class="form__btn" type="submit" name="submit" value="Отправить">
+                <input class="form__btn" type="reset" name="reset" value="Очистить">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <nav class="menu">
       <h2>Меню</h2>
       <ul class="menu__list">
