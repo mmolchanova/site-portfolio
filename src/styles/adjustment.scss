@@ -75,9 +75,30 @@
 }
 
 .title-shaddow {
-    @include shaddow-text(-90px);
+    @include shaddow-text(0, -20%);
+}
 
-    &--grey {
-        fill: $grey;
+.title-shaddow--grey {
+    @include shaddow-text(-70%, -50%);
+    fill: $grey;
+}
+
+.arrow {
+    fill: #fff;
+    transform: translate(-50%, -50%);
+    fill-opacity: 0.3;
+
+    &--up {
+        transform: translate(25%, -50%) rotate(-180deg);
     }
+
+    &:hover {
+        transition: .5s;
+        fill-opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.menu {
+    display: none;
 }

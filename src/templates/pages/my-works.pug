@@ -15,7 +15,7 @@ block content
         button.header__hamburger(type="button")
             svg.hamburger__ico(height="40" width="40")
                     use(xlink:href="assets/images/sprite.svg#hamburger")
-        svg.header__arrow(width="25" height="15")
+        svg.arrow.header__arrow(width="25" height="15")
             use(xlink:href="assets/images/sprite.svg#arrow_down")
         svg.triangle(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
             polygon.triangle__part(points="0,0   0,86   500.8,86   500.8,75.5")
@@ -23,13 +23,13 @@ block content
 
     .works 
         h1.works__title.title-dec Мои работы
-        svg.title-shaddow(height="250")
+        svg.title-shaddow(width="300")
             use(xlink:href="assets/images/sprite.svg#works_header")
         .works__content
             .works__block
                 h2.works__subtitle.subtitle-dec Сайт школы онлайн образования
                 .works__desc HTML, CSS, JAVASCRIPT
-                a.works__button(href="#") Посмотреть сайт
+                a.works__button(href="#" target="_blank") Посмотреть сайт
             .works__main
                 .works__wrap
                     .works__sub
@@ -37,25 +37,27 @@ block content
 
     .my-block
         h1.my-block__title.title-dec Что обо мне говорят
-        svg.title-shaddow.title-shaddow--grey(height="250")
-            use(xlink:href="assets/images/sprite.svg#about_header")
+            svg.title-shaddow.title-shaddow--grey(width="500")
+                use(xlink:href="assets/images/sprite.svg#about_header")
         .reviews
             ul.reviews__list
                 li.reviews__item
+                    img.reviews__quote(src="assets/images/quote.png")
                     .reviews__text
                         p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                     .reviews__author
                         .reviews__avatar
-                            img.reviews__pic(src="assets/images/dima.jpg")
+                            img.reviews__pic.reviews__pic--first(src="assets/images/dima.jpg")
                         .reviews__info
                             .reviews__name Ковальчук Дмитрий
                             .reviews__desc основатель Loftschool
                 li.reviews__item
+                    img.reviews__quote(src="assets/images/quote.png")
                     .reviews__text
                         p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
                     .reviews__author
                         .reviews__avatar
-                            img.reviews__pic(src="assets/images/vova.jpg")
+                            img.reviews__pic.reviews__pic--second(src="assets/images/vova.jpg")
                         .reviews__info
                             .reviews__name Сабанцев Владимир
                             .reviews__desc преподаватель
@@ -70,6 +72,13 @@ block content
                         .form__btns
                             input.form__btn(type="submit" name="submit" value="Отправить")
                             input.form__btn(type="reset" name="reset" value="Очистить")
+            svg.arrow.arrow--up.my-block__arrow(width="25" height="15")
+                use(xlink:href="assets/images/sprite.svg#arrow_down")
+    
+    
+
+
+            
 
 
 

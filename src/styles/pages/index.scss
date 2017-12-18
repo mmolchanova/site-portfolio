@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-color: rgba(#fff, .3);
+    background-color: rgba(#fff, .4);
     border-radius: 10px 10px 0 0;
 }
 
@@ -56,7 +56,7 @@
         text-decoration: none;
         color: #fff;
         background-color: $yellow;
-        font: 400 16px 'roboto';
+        font: 500 16px 'roboto';
         padding: 11px 31px;
         height: 100%;
     }
@@ -76,18 +76,18 @@
 }
 
 .authorization__btn {
-        display: inline-block;
-        text-decoration: none;
-        color: #fff;
-        font: 400 16px 'roboto';
-        padding: 10px 25px;
-        border: 2px solid #fff;
-        border-radius: 5px;
-        &:hover {
-            background-color: #fff;
-            color: $rust;
-            transition: .5s;
-        }
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font: 400 16px 'roboto';
+    padding: 10px 25px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    &:hover {
+        background-color: #fff;
+        color: $rust;
+        transition: .5s;
+    }
 }
 
 .copyright {

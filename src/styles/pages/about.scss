@@ -39,3 +39,10 @@
     transform: translateY(-27%);
 }
 
+.map {
+    &:after {
+        content: "";
+        display: block;
+        height: 145px;
+    } 
+}

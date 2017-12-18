@@ -29,6 +29,10 @@ ul {
     overflow: hidden;
   }
   
-  body {
-    font: 400 16px 'roboto';
-  }
+body {
+  font: 400 16px 'roboto';
+}
+
+.main-wrapper {
+  position: relative;   
+}

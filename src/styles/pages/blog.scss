@@ -1,3 +1,14 @@
+.blog__wrap {
+    display: flex;
+    flex-direction: column;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 145px;
+    }     
+}
+
 .blog {
     width: 100%;
     z-index: 5; 

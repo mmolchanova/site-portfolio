@@ -1,6 +1,6 @@
 ul.socials-list
     each item in ['vk', 'github', 'in']
         li.socials__item
-            a(href=`${item}`).socials__link
+            a(href=`${item}` target="_blank").socials__link
                 svg.socials__icon(width="30" height="25")
                     use(xlink:href="assets/images/sprite.svg#"+item)

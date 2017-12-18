@@ -1,6 +1,6 @@
-@mixin shaddow-text($y) {
+@mixin shaddow-text($x, $y) {
     fill: $rust;
     fill-opacity: 0.1;
-    transform: translateY($y);
+    transform: translate($x, $y);
     position: absolute;
   }

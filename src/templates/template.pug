@@ -13,6 +13,9 @@ html
         script(src="./assets/scripts/bundle.js" defer)
 
     body
-        block content
-        if title != 'Добро пожаловать'
-            include common/menu.pug
+        .main-wrapper
+            block content
+            if title != 'Добро пожаловать'
+                include common/menu.pug
+            if title != 'Добро пожаловать'
+                include common/footer.pug
