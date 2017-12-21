@@ -1,3 +1,5 @@
+
+
 extends ../template
 
 block variables
@@ -36,6 +38,9 @@ block content
                 h2.about__subtitle.subtitle-dec Чем я могу быть вам полезна
                 .about__desc Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
                 include ../common/technologies.pug
-    .map
+    .map-wrap 
+        .map(id="map")
+            script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfEauhtted31QfXMczZ3OYgeBmTErYxMM&callback=initMap", async defer)
 
                     
+

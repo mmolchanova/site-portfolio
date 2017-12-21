@@ -11,11 +11,11 @@ html
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         link(rel="stylesheet" href="./assets/styles/app.min.css")
         script(src="./assets/scripts/bundle.js" defer)
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 
     body
         .main-wrapper
             block content
             if title != 'Добро пожаловать'
                 include common/menu.pug
-            if title != 'Добро пожаловать'
                 include common/footer.pug

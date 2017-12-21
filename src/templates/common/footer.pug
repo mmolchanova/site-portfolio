@@ -1,1 +1,29 @@
+- 
+    var nav = [
+        ['my-works', 'Мои работы'],
+        ['about', 'Обо мне'],
+        ['blog', 'Блог'],
+        ['authorization', 'Авторизация']
+    ]
+
 .footer
+    .footer__column
+        .footer__content
+            .footer__text.footer__text--white Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+            .footer__text © Владимир Астахов
+            .footer__text Создано с любовью в LoftSchool | 2016 
+    .footer__column
+        .footer__content
+            ul.footer__nav-list
+                each item in nav
+                    li.footer__nav-item 
+                        a(href="./"+item[0]+".html") #{item[1]}
+            .footer__socials
+                include ../common/socials.pug
+    .footer__column
+        .footer__content
+            .footer__contacts
+                .footer__text Контакты:
+                .footer__text molchanova.m2903@gmail.com
+                .footer__text +7 983 319 37 93
+                .footer__text Новосибирск, ул. 1905 года

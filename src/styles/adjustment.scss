@@ -18,6 +18,10 @@
         </svg>');
         margin: 0 10px 20px 5px;
     }
+    // &:before {
+    //     content: url('../images/phone.svg');;
+    //     margin: 0 10px 20px 5px;
+    // }
     &:after {
         content: url('data:image/svg+xml;utf8, <svg 
         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +72,7 @@
     display: inline-flex;
 }
 
-.subtitle{
+.subtitle {
     font: 500 35px 'sansus_webissimo';
     margin-bottom: 40px;
     display: inline-flex;
