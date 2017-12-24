@@ -1,5 +1,13 @@
+.desert {
+    background: url('../images/sand.jpg') repeat-x bottom left;
+    height: 100%;
+    width: 6110px;
+    position: fixed;
+    left: 0; 
+    animation: bg 80s linear infinite;
+}
+
 .wrapper {
-    background-image: url('../images/sand.jpg');
     height: 100vh;
     min-height: 100%;
     position: relative;

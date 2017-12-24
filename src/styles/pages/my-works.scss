@@ -27,6 +27,10 @@
     background-color: $bg-beige;
 }
 
+.works__subtitle {
+    max-width: 400px;
+}
+
 .works__main {
     width: 50%;
     display: flex;
@@ -37,7 +41,7 @@
 
 .works__desc {
     display: inline-flex;
-    width: 70%;
+    width: 420px;
     justify-content: center;
     color: $rust;
     border-top: 1px solid #aeaeab;
@@ -49,23 +53,17 @@
     text-decoration: none;
     color: #fff;
     background-color: $yellow;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 50px;
     display: block;
     border-radius: 5px;
-    
-    // &:before {
-    //     content: url('data:image/svg+xml;utf8, <svg 
-    //     xmlns="http://www.w3.org/2000/svg"
-    //     xmlns:xlink="http://www.w3.org/1999/xlink"
-    //     width="20px" height="20px" fill="#fff">
-    //     <use xlink:href="../images/sprite.svg#link" />
-    //    </svg>');
-    //     // width: 20px;
-    //     // height: 20px;
-    //     // fill: #fff;
-    // //    margin: 0 10px 10px 5px;
-    // }
+    position: relative;
+
+    &:hover {
+        background-color: $rust;
+        transition: .5s;
+    }
 }
+
 
 .my-block {
     width: 100%;

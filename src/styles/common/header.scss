@@ -33,7 +33,7 @@
 }
 
 .header__text {
-  @include shaddow-text(0, 0);
+  @include shadow-text(0, 0);
   top: 15%;
 
   &--min {

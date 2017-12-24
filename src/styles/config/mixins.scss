@@ -1,6 +1,16 @@
-@mixin shaddow-text($x, $y) {
-    fill: $rust;
-    fill-opacity: 0.1;
-    transform: translate($x, $y);
-    position: absolute;
+@mixin shadow-text($x, $y) {
+  fill: $rust;
+  fill-opacity: 0.1;
+  transform: translate($x, $y);
+  position: absolute;
+}
+
+@keyframes bg {
+  from {
+      transform: translateX(0);
   }
+
+  to {
+      transform: translateX(-3056px);
+  }
+}

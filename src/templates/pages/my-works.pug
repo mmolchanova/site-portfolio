@@ -23,13 +23,15 @@ block content
 
     .works 
         h1.works__title.title-dec Мои работы
-        svg.title-shaddow(width="300")
+        svg.title-shadow(width="300")
             use(xlink:href="assets/images/sprite.svg#works_header")
         .works__content
             .works__block
                 h2.works__subtitle.subtitle-dec Сайт школы онлайн образования
                 .works__desc HTML, CSS, JAVASCRIPT
                 a.works__button(href="#" target="_blank") Посмотреть сайт
+                    svg.icon(height="20" width="20")
+                        use(xlink:href="assets/images/sprite.svg#link")
             .works__main
                 .works__wrap
                     .works__sub
@@ -37,7 +39,7 @@ block content
 
     .my-block
         h1.my-block__title.title-dec Что обо мне говорят
-            svg.title-shaddow.title-shaddow--grey(width="500")
+            svg.title-shadow.title-shadow--grey(width="500")
                 use(xlink:href="assets/images/sprite.svg#about_header")
         .reviews
             ul.reviews__list
