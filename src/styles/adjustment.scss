@@ -17,6 +17,10 @@
        content: url('../images/svg_icons/dots3Right.svg');
        margin: 0 5px 20px 10px;
     }
+
+    @include tablets {
+        font: 500 49px 'sansus_webissimo';
+    }
 }
 
 .subtitle-dec {
@@ -36,6 +40,10 @@
     &:after {
         content: url('../images/svg_icons/dots2Right.svg');
         margin: 0 5px 10px 10px;
+    }
+
+    @include tablets {
+        font: 500 30px 'sansus_webissimo';
     }
 }
 

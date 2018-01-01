@@ -1,5 +1,8 @@
 .user
     .user__img(style="background-image: url(assets/images/photo.jpg); background-position: 50% 38%;")
         img.user__pic.visually-hidden(src="assets/images/photo.jpg" alt="Аватар")  
-    h1.user__title Мария Молчанова
+    if title == 'Добро пожаловать'
+        h1.user__title Мария Молчанова
+    else
+        h1.user__title.user__title--header Мария Молчанова
     .user__info Личный сайт веб разработчика

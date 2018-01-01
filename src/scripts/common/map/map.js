@@ -8,19 +8,27 @@
 //     }
 // });
 
-
 var initMap = () => {
-    var uluru = {lat: 55.046, lng: 82.910};
+    var centerPos = {lat: 55.031, lng: 82.910};
+    var markerPos = {lat: 55.046, lng: 82.910};
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: uluru,
+        zoom: 14,
+        center: centerPos,
         mapTypeControl: false,
-        disableDefaultUI: true
+        disableDefaultUI: true,
+        gestureHandling: 'none'
     });
-    var marker = new google.maps.Marker({position: uluru, map: map});
+
+    var markerIcon = {
+        url: '/assets/images/svg_icons/map_marker.svg',
+        size: new google.maps.Size(45, 55),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(0, 55)
+    };
+
+    var marker = new google.maps.Marker({position: markerPos, map: map, icon: markerIcon});
 
     map.setOptions({styles: styles.desert});
-
 };
 
 var styles = {
@@ -121,97 +129,3 @@ window.initMap = initMap;
 
 
 console.log('in map.js')
-
-
-
-// {
-//     elementType: 'geometry',
-//     stylers: [{color: '#f5f5f5'}]
-// },
-// {
-//     elementType: 'labels.icon',
-//     stylers: [{visibility: 'off'}]
-// },
-// {
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#616161'}]
-// },
-// {
-//     elementType: 'labels.text.stroke',
-//     stylers: [{color: '#f5f5f5'}]
-// },
-// {
-//     featureType: 'administrative.land_parcel',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#bdbdbd'}]
-// },
-// {
-//     featureType: 'man_made',
-//     elementType: 'geometry.stroke',
-//     stylers: [{color: '#bdbdbd'}]
-// },
-// {
-//     featureType: 'poi',
-//     elementType: 'geometry',
-//     stylers: [{color: '#eeeeee'}]
-// },
-// {
-//     featureType: 'poi',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#757575'}]
-// },
-// {
-//     featureType: 'poi.park',
-//     elementType: 'geometry',
-//     stylers: [{color: '#e5e5e5'}]
-// },
-// {
-//     featureType: 'poi.park',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#9e9e9e'}]
-// },
-// {
-//     featureType: 'road',
-//     elementType: 'geometry',
-//     stylers: [{color: '#ffffff'}]
-// },
-// {
-//     featureType: 'road.arterial',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#757575'}]
-// },
-// {
-//     featureType: 'road.highway',
-//     elementType: 'geometry',
-//     stylers: [{color: '#dadada'}]
-// },
-// {
-//     featureType: 'road.highway',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#616161'}]
-// },
-// {
-//     featureType: 'road.local',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#9e9e9e'}]
-// },
-// {
-//     featureType: 'transit.line',
-//     elementType: 'geometry',
-//     stylers: [{color: '#e5e5e5'}]
-// },
-// {
-//     featureType: 'transit.station',
-//     elementType: 'geometry',
-//     stylers: [{color: '#eeeeee'}]
-// },
-// {
-//     featureType: 'water',
-//     elementType: 'geometry',
-//     stylers: [{color: '#86A77A'}]
-// },
-// {
-//     featureType: 'water',
-//     elementType: 'labels.text.fill',
-//     stylers: [{color: '#9e9e9e'}]
-// }

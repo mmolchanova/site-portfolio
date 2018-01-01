@@ -1,7 +1,87 @@
 .map-wrap {
-    height: 1080px;
+    height: 1072px;
+
+    @include smallDesktop {
+        height: 970px;
+    }
+
+    @include tablets {
+        height: 745px;
+    }
 }
 
 #map {
     height: 100%;
   }
+
+.map {
+    color: $dark;
+}
+
+.map-wrap {
+    position: relative;
+}
+
+.map__elem {
+    &:after {
+        content: "";
+        display: block;
+        height: 145px;
+    } 
+
+    @include tablets {
+        &:after {
+            content: "";
+            display: block;
+            height: 225px;
+        } 
+    }
+}
+
+.map__contacts {
+    height: 285px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48%,-70%);
+    background-color: rgba(#fff, .8);
+    border-radius: 10px;
+
+    @include smallDesktop {
+        transform: translate(-50%,-52%);
+    }
+}
+
+.map__subtitle {
+    margin-bottom: 0px; 
+}
+
+.map__row {
+    display: flex;
+    margin-left: 40px;
+}
+
+.map__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 52.5%;
+    margin-bottom: 20px;
+}
+
+
+.map__icon {
+    fill: $yellow;
+    margin-right: 10px;
+}
+
+.map__text {
+    a {
+        text-decoration: none;
+        color: $dark;
+    }
+}

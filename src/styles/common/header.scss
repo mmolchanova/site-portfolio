@@ -1,5 +1,5 @@
 .header {
-  height: 600px;
+  height: 612px;
   width: 100%;
   background-image: url('../images/sand.jpg');
   position: relative;
@@ -14,6 +14,10 @@
     height: 400px;
     background-position: 0 15%;
   }
+
+  @include tablets {
+    height: 512px;
+  }
 }
 
 .header__user {
@@ -22,13 +26,17 @@
 
 .header__content {
   position: absolute;
-  top: 16%;
+  top: 19%;
   display: flex;
   flex-direction: column;
   align-items: center; 
 
   &--min {
     top: 5%;
+  }
+
+  @include tablets {
+    top: 15%;
   }
 }
 
@@ -52,7 +60,7 @@
   background-color: transparent;
   position: absolute;
   top: 25px;
-  right: 30px;
+  right: 25px;
 
   &:hover .hamburger__ico {
     transition: .5s;
@@ -67,7 +75,7 @@
 
 .header__arrow {
   position: absolute;
-  bottom: 80px;
+  bottom: 75px;
   left: 50%;
   z-index: 10;
 }
@@ -81,6 +89,10 @@
   fill: $bg;
 
   &--biege {
-      fill: $bg-beige;
+    fill: $bg-beige;
+
+    @include tablets {
+      fill: $bg;
+    }
   }
 }
