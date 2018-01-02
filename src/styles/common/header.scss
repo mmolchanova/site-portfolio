@@ -11,7 +11,7 @@
   z-index: 1;
 
   &--min {
-    height: 400px;
+    height: 415px;
     background-position: 0 15%;
   }
 
@@ -36,7 +36,7 @@
   align-items: center; 
 
   &--min {
-    top: 5%;
+    top: 10%;
   }
 
   @include tablets {

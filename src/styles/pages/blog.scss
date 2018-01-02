@@ -1,12 +1,29 @@
 .blog__wrap {
     display: flex;
     flex-direction: column;
+    background-color: $bg;
 
     &:after {
         content: "";
         display: block;
         height: 145px;
-    }     
+    }  
+
+    @include tablets {
+        &:after {
+            content: "";
+            display: block;
+            height: 223px;
+        } 
+    }
+
+    @include phones {
+        &:after {
+            content: "";
+            display: block;
+            height: 345px;
+        } 
+    }   
 }
 
 .blog {
@@ -15,7 +32,11 @@
     display: flex;
     color: $dark;
     height: 100%;
-    background-color: $bg;
+    margin-top: 43px;
+
+    @include phones {   
+        margin-top: 30px; 
+    }  
 }
 
 .blog__nav {
@@ -23,19 +44,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include smallDesktop {
+        width: 26%;
+    }
+
+    @include tablets {
+        display: none;
+    }
 }
 
-.nav-blog__list{
-    max-width: 270px;
+.nav-blog__list {
+    max-width: 333px;
+    margin-top: 8px;
 }
 
 .nav-blog__item {
     display: flex;
     justify-content: flex-end;
     border: none;
+    margin-bottom: 3px;
+    line-height: 1.71;
 
     &--active {
-        border-right: 2px solid $rust;
+        border-right: 3px solid $rust;
         
         .nav-blog__link {
             font: 700 16px 'roboto';
@@ -44,7 +76,7 @@
     }
 //проверка
     &:first-child {
-        border-right: 2px solid $rust;
+        border-right: 3px solid $rust;
         
         .nav-blog__link {
             font: 700 16px 'roboto';
@@ -58,34 +90,131 @@
     color: $dark;
     display: inline-flex;
     text-align: right;
-    margin: 10px;    
+    margin: 11px 16px;   
 }
 
 .blog__content {
     width: 75%;
+
+    @include smallDesktop {
+        width: 66%;
+    }
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .blog__list {
     max-width: 880px;
+    margin-left: 59px;
+    margin-bottom: -14px;
+
+    @include smallDesktop {
+        margin-left: 12.25%;
+        margin-bottom: -18px;
+    }
+
+    @include tablets {
+        margin-right: 3%;
+        margin-left: 3%;
+        margin-bottom: 79px;
+    }
+
+    @include phones {
+        margin-bottom: 113px;
+    }
 }
 
 .blog__item {
     border-bottom: 5px solid #ecebe4; 
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 
     &:last-child {
         border: none;
+    }
+
+    @include smallDesktop {
+        margin-bottom: 63px;
+    }
+
+    @include tablets {
+        margin-bottom: 45px;
+    }
+
+    @include phones {
+        margin-bottom: 27px;
+    }
+}
+
+.blog__title {
+    margin-bottom: 17px;
+
+    @include tablets {
+        font: 500 30px 'sansus_webissimo';
+        margin-bottom: 8px;
+    }
+
+    @include phones {
+        font: 500 21px 'sansus_webissimo';
+        margin-bottom: 8px;
     }
 }
 
 .blog__data {
     color: $rust;
+    margin-bottom: 27px;
+
+    @include tablets {
+        margin-bottom: 17px;
+    }
 }
 
 .blog__desc {
     margin-bottom: 70px;
+
+    @include smallDesktop {
+        margin-bottom: 80px;
+    }
+
+    @include tablets {
+        margin-bottom: 51px;
+    }
+
+    @include phones {
+        margin-bottom: 18px;
+    }
+}
+
+.blog__desc-text {
+    line-height: 1.71;
+
+    p {
+        margin-top: -10px;
+    }
+
+    @include smallDesktop {
+        line-height: 1.625;
+        
+        p {
+            margin-top: -8px;
+        }
+    }
+
+    @include tablets {
+        line-height: 1.5;
+        
+        p {
+            margin-top: -6px;
+        }
+    }
 }
 
 .blog__desc-img {
     max-width: 100%;
+    margin-top: -5px;
+
+    @include phones {
+        max-width: initial;
+    }
 }

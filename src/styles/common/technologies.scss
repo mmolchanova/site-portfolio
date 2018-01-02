@@ -40,7 +40,11 @@
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+
+    @include tablets {
+        justify-content: space-around;
+    }
 }
 
 .diagram__circle-block {
@@ -64,7 +68,11 @@
     width: 120px;
     height: 120px;
     margin-bottom: 33px;
-
+    margin-right: 33px;
+    
+    &:last-child {
+        margin-right: 0;
+    }    
 
     @include smallDesktop {
         width: 110px;
