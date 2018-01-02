@@ -82,12 +82,16 @@
 }
 
 .title-shadow {
-    @include shadow-text(0, -20%);
+    @include shadow-text(-50%, -70%);
 }
 
 .title-shadow--grey {
     @include shadow-text(-70%, -50%);
     fill: $grey;
+
+    @include phones {
+        width: 300px;
+    }
 }
 
 .arrow {
@@ -96,7 +100,7 @@
     fill-opacity: 0.3;
 
     &--up {
-        transform: translate(25%, -50%) rotate(-180deg);
+        transform: translate(-50%, -50%) rotate(-180deg);
     }
 
     &:hover {
