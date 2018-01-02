@@ -21,6 +21,17 @@
     @include tablets {
         font: 500 49px 'sansus_webissimo';
     }
+
+    @include phones {
+        font: 500 35px 'sansus_webissimo';
+
+        &:before {
+            margin: 0 10px 10px 5px;
+        }
+        &:after {
+           margin: 0 5px 10px 10px;
+        }
+    }
 }
 
 .subtitle-dec {
@@ -44,6 +55,17 @@
 
     @include tablets {
         font: 500 30px 'sansus_webissimo';
+    }
+
+    @include phones {
+        font: 500 21px 'sansus_webissimo';
+        
+        &:before {
+            margin: 0 10px 5px 5px;
+        }
+        &:after {
+           margin: 0 5px 5px 10px;
+        }
     }
 }
 

@@ -57,6 +57,13 @@
             width: 600px;
             margin-top: 45px;
         }        
+        @include phones {
+            margin-top: 10px;
+        }
+    }
+
+    @include phones {
+        width: 100%;
     }
 }
 
@@ -67,6 +74,11 @@
 
     @include tablets {
         margin-top: 20px;
+    }
+
+    @include phones {
+        margin-top: 12px;
+        margin-bottom: 18px;
     }
 }
 
@@ -88,6 +100,11 @@
        height: 53vw;
        margin-bottom: 35px;
     }
+
+    @include phones {
+        height: 84vw;
+        margin-bottom: 23px;
+    }
 }
 
 .about__pic {
@@ -103,12 +120,20 @@
         @include tablets {
             margin-bottom: -10px;
         } 
+        @include phones {
+            margin-bottom: -7px;
+        }
     }  
 
     @include tablets {
         max-width: 300px;
         margin-bottom: 8px;
     } 
+
+    @include phones {
+        max-width: 250px;
+        margin-bottom: 13px;
+    }
 }
 
 .about__desc {
@@ -122,12 +147,18 @@
         }
         @include tablets {
             width: 100%;
-            line-height: 1.71;
          }
     }  
 
     @include tablets {
         width: 480px;
+        line-height: 1.71;
+    }
+
+    @include phones {
+        width: 100%;
+        margin-left: 10px;
+        margin-bottom: 20px;
     }
 }
 

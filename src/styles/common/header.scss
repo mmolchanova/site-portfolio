@@ -18,6 +18,10 @@
   @include tablets {
     height: 512px;
   }
+
+  @include phones {
+    height: 560px;
+  }
 }
 
 .header__user {
@@ -38,6 +42,10 @@
   @include tablets {
     top: 15%;
   }
+
+  @include phones {
+    top: 13.5%;
+  }
 }
 
 .header__text {
@@ -47,12 +55,21 @@
   &--min {
     top: 30%;
   }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .header__socials {
   position: absolute;
   top: 30px;
   left: 30px;
+
+  @include phones {
+    top: 10px;
+    left: 10px;
+  }
 }
 
 .header__hamburger {
@@ -66,11 +83,21 @@
     transition: .5s;
     fill: $rust;
     cursor: pointer;
-  } 
+  }
+  
+  @include phones {
+    top: 5px;
+    right: 5px;
+  }
 }
 
 .hamburger__ico {
   fill: #fff;
+
+  @include phones {
+    width: 27px;
+    height: 27px;
+  }
 }
 
 .header__arrow {

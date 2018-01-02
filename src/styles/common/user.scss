@@ -26,16 +26,28 @@
     &--header {
         font-size: 35px;
         margin-top: 8px;
+
+        @include phones {
+            margin-top: 17px;
+            font-size: 21px;
+        }
     }
     
     &--blog {
         font: 500 63px 'sansus_webissimo';
         margin: 0;
     }
+
+
 }
 
 .user__info {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+
+    @include phones {
+        font-size: 14px;
+        line-height: 2;
+    }
 }

@@ -11,6 +11,11 @@
 var initMap = () => {
     var centerPos = {lat: 55.031, lng: 82.910};
     var markerPos = {lat: 55.046, lng: 82.910};
+    
+    if (document.documentElement.clientWidth < 481) {
+        centerPos = {lat: 55.040, lng: 82.910};
+    };
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
         center: centerPos,

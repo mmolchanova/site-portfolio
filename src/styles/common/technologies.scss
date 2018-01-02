@@ -1,6 +1,10 @@
 .technologies {
     width: 100%;
     margin-bottom: 38px;
+
+    @include tablets {
+        margin-bottom: -3px;
+    }
 }
 
 .technologies__title {
@@ -21,6 +25,24 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 40px;
+    }
+    @include phones {
+        margin-bottom: -2px;
+    }
+}
+
+.diagram {
+    @include phones {
+        width: 100%;
+    }
+}
+
+.diagram__list {
+    @include phones {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
@@ -53,6 +75,11 @@
     @include smallDesktop {
         width: 110px;
         height: 110px;
+    }
+
+    @include phones {
+        margin-right: 0;
+        margin-bottom: 30px;
     }
 }
 
