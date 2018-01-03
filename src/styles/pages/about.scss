@@ -44,17 +44,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 95%;
     padding: 0 5px;
 
     @include tablets {
-        width: 480px;
         margin-bottom: 10px;
     }
 
     &--right {
         @include tablets {
-            width: 600px;
+            max-width: 600px;
             margin-top: 45px;
         }        
         @include phones {
@@ -165,6 +164,7 @@
 
 .about__content {
     margin-left: 32px;
+    width: 100%;
 
     @include tablets {
         display: flex;

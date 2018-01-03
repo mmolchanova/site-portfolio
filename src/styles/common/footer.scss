@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    height: 145px;
+    min-height: 145px;
     background-color: rgba($dark, .9);
     display: flex;
     position: absolute;
@@ -10,8 +10,8 @@
 
     @include tablets {
         height: 223px;
-        flex-wrap: wrap;
         font: 300 14px 'roboto';
+        justify-content: center;        
     }
 
     @include phones {
@@ -19,84 +19,144 @@
     }
 }
 
+.footer__wrap {
+    display: flex;
+
+    @include tablets {
+        justify-content: center; 
+        flex-wrap: wrap;        
+        width: 94%;
+        height: 100%;
+    }    
+}
+
 .footer__column {
     display: flex;
+    flex: 1 1 33.3%;
     align-items: center;
-    flex: 1 1 auto;
 
-    &:first-child .footer__content {
-        border: none;
-
-        @include tablets {
-            width: 94%;
-            border-bottom: 1px solid $light-grey;
-        }
+    @include smallDesktop {
+        flex: 1 1 auto;
     }    
 
-    &:first-child {
-        @include tablets {
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-    }   
+    @include tablets {
+        justify-content: flex-start;
+        flex: 1 1 50%;
+    }
+
+    @include phones {
+        flex-direction: column;
+        width: 100%;
+        flex: 1 1 auto;
+    }
 
     &:last-child {
         @include tablets {
             justify-content: flex-end;
         }
-    }   
-
-    @include tablets {
-        height: 95px;
-        justify-content: flex-start;
     }
 
+    &:first-child {
+        @include tablets {
+            flex: 0 0 100%;
+        }
+    }
+
+    &:first-child .footer__block {
+        border: none;
+
+        @include tablets {
+            width: 100%;
+            min-height: initial;
+            border-bottom: 1px solid $light-grey;
+            justify-content: center;
+            height: 86px;
+        }
+        
+        @include phones {
+            height: 130px;  
+        }
+    }
+
+
+    &:last-child .footer__block {
+        @include phones {
+            // height: 105px;
+            border: none;
+        }
+    }
+}
+
+.footer__block {
+    display: flex;
+    min-height: 100px;
+    border-left: 1px solid $light-grey;
+    padding-top: 3px;
+
+    @include tablets {
+        border: none;
+        padding-top: 0;
+    }
+
+    @include phones {
+        width: 100%;
+        border-bottom: 1px solid $light-grey;
+        min-height: initial;
+    }
 }
 
 .footer__content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100px;
-    border-left: 1px solid $light-grey;
-    // margin: 30px 0 0 0;
-    padding: 0 10px 0 30px;
-    // max-width: 86%;
+    min-height: 100px;
+    margin: 0 10px 0 30px;
 
     @include tablets {
         border: none;
-        margin: 0;
-        padding: 0 30px 0 30px;
         justify-content: flex-start;
+        min-height: initial;
+        margin: -5px 0 15px 0;
     }
 
     &--left {
-        max-width: 390px;
-       
+        max-width: 365px;
+
         @include tablets {
-            max-width: inherit;
+            margin: 0;
             justify-content: space-around;
             align-items: center;
+            max-width: initial;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 8px;
         }
     }
-    &--right {
-        max-width: 300px;
-    }
-    &--center {
-        width: 440px;
+
+    @include phones {
+        width: 100%;
+        align-items: center;
+        margin: 0;
+        margin-top: 5px;
     }
 }
 
 .footer__nav-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
-    width: 100%;
+    max-width: 405px;
+
+    @include tablets {
+        margin-bottom: 18px;
+    }
 }
 
 .footer__nav-item {
-    margin-right: 10px;
+    margin-right: 38px;
+    display: flex;
+    white-space: nowrap;
 
     &:last-child {
         margin-right: 0;
@@ -106,17 +166,33 @@
         text-decoration: none;
         color: #fff;
         font: 500 16px 'roboto';
+
     }
     a:hover {
         color: $rust;
     }
 
+    @include tablets {
+        margin-right: 30px;
+        a {
+            font: 500 14px 'roboto';
+        }
+    }
+
+    @include phones {
+        margin-right: 11px;
+    }
 }
 
 .footer__text {
     margin-right: 5px;
+    
     &--white {
         color: #fff;
+    }
+
+    @include tablets {
+        text-align: center;
     }
 }
 
@@ -126,6 +202,10 @@
 
     @include tablets {
         flex-direction: row;
+    }
+
+    @include phones {
+        flex-direction: column;
     }
 }
 
@@ -139,165 +219,26 @@
             cursor: pointer;
         }
     }
-}
 
-.footer__contacts {
-    @include tablets {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    @include phones {
+        margin-bottom: 12px;
     }
 }
 
+.footer__contacts {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    @include tablets {
+        align-items: flex-end;
+    }
 
-
-
-
-
-
-
-// .footer {
-//     width: 100%;
-//     height: 145px;
-//     background-color: rgba($dark, .9);
-//     display: flex;
-//     position: absolute;
-//     bottom: 0;
-//     color: $light-grey;
-//     font: 300 16px 'roboto';
-
-//     @include tablets {
-//         height: 225px;
-//         flex-wrap: wrap;
-//         font: 300 14px 'roboto';
-//     }
-// }
-
-// .footer__column {
-//     display: flex;
-//     align-items: center;
-//     flex: 1 1 auto;
-
-//     @include tablets {
-//         height: 95px;
-//         justify-content: center;
-//     }
-
-//     &:first-child .footer__content {
-//         border: none;
-
-//         @include tablets {
-//             width: 93%;
-//             border-bottom: 1px solid $light-grey;
-//         }
-//     }    
-
-//     &:last-child {
-//         @include tablets {
-//             justify-content: flex-end;
-//         }
-//     }   
-
-//     &:first-child {
-//         @include tablets {
-//             width: 100%;
-//         }
-//     }   
-
-// }
-
-// .footer__content {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     height: 100px;
-//     border-left: 1px solid $light-grey;
-//     // margin: 30px 0 0 0;
-//     padding: 0 10px 0 30px;
-//     // max-width: 86%;
-
-//     @include tablets {
-//         border: none;
-//         margin: 0;
-//         padding: 0 10px 0 10px;
-//         justify-content: flex-start;
-//     }
-
-//     &--left {
-//         max-width: 390px;
-       
-//         @include tablets {
-//             max-width: inherit;
-//             justify-content: space-around;
-//             align-items: center;
-//         }
-//     }
-//     &--right {
-//         max-width: 300px;
-//     }
-//     &--center {
-//         width: 440px;
-//     }
-// }
-
-// .footer__nav-list {
-//     display: flex;
-//     justify-content: space-between;
-//     margin-bottom: 20px;
-//     width: 100%;
-// }
-
-// .footer__nav-item {
-//     margin-right: 10px;
-
-//     &:last-child {
-//         margin-right: 0;
-//     }
-
-//     a {
-//         text-decoration: none;
-//         color: #fff;
-//         font: 500 16px 'roboto';
-//     }
-//     a:hover {
-//         color: $rust;
-//     }
-
-// }
-
-// .footer__text {
-//     margin-right: 5px;
-//     &--white {
-//         color: #fff;
-//     }
-// }
-
-// .footer__copyright {
-//     display: flex;
-//     flex-direction: column;
-
-//     @include tablets {
-//         flex-direction: row;
-//     }
-// }
-
-// .footer__socials {
-//     .socials__icon {
-//         fill: $light-grey; 
-
-//         &:hover {
-//             transition: .5s;
-//             fill: #fff; 
-//             cursor: pointer;
-//         }
-//     }
-// }
-
-// .footer__contacts {
-//     @include tablets {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-end;
-//     }
-// }
+    @include phones {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 15px;
+        height: 90px;
+    }
+}
