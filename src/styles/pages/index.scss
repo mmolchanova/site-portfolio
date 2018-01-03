@@ -21,7 +21,7 @@
 
 .main-block {
     min-height: 395px;
-    min-width: 380px;
+    width: 380px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,11 +32,11 @@
     transform: translateY(-1%);
 
     @include tablets {
-        min-width: 350px;
+        width: 350px;
     }
 
     @include phones {
-        min-width: 300px;
+        width: 300px;
     }
 }
 
@@ -75,16 +75,16 @@
         color: #fff;
         background-color: $yellow;
         font: 500 16px 'roboto';
-        padding: 11px 31px;
+        padding: 11px 30px;
         height: 100%;
 
         @include tablets {
-            padding: 11px 26px;
+            padding: 11px 25px;
         }
 
         @include phones {
             font: 400 14px 'roboto';
-            padding: 11px 22px;
+            padding: 11px 21px;
         }
     }
 

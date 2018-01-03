@@ -1,0 +1,30 @@
+.authorization-form__wrap
+    form.authorization-form__elem(action="server.php",method="post",id="contact-form")
+        .authorization-form__content
+            h2.subtitle-dec.authorization-form__subtitle Авторизуйтесь
+            .authorization-form__input-block
+                .authorization-form__input-img
+                    svg.authorization-form__input-ico(height="15" width="15")
+                        use(xlink:href="assets/images/sprite.svg#login")
+                input.authorization-form__input(type="text" id="login" name="login" placeholder="Логин")
+            .authorization-form__input-block
+                .authorization-form__input-img
+                    svg.authorization-form__input-ico(height="15" width="15")
+                        use(xlink:href="assets/images/sprite.svg#password")
+                input.authorization-form__input(type="password" id="password" name="password" placeholder="Пароль")
+            .authorization-form__chek-block
+                input.authorization-form__chek-elem.visually-hidden(type="checkbox" id="man" name="man" value="1" checked="checked")
+                label.authorization-form__chek-label(for="man") Я человек
+            .authorization-form__radio-name Вы точно не робот?
+            .authorization-form__radio-block
+                .authorization-form__radio
+                    input.authorization-form__radio-elem.visually-hidden(type="radio" id="robot-yes" name="robot" value="1" checked="checked")
+                    label.authorization-form__radio-label(for="robot-yes") Да
+                .authorization-form__radio
+                    input.authorization-form__radio-elem.visually-hidden(type="radio" id="robot-no" name="robot" value="0")
+                    label.authorization-form__radio-label(for="robot-no") Не уверен
+nav.authorization-nav
+    ul.authorization-nav__list
+        each item in navAuto
+            li.authorization-nav__item 
+                a(href="./"+item[0]+".html") #{item[1]}

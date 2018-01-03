@@ -8,20 +8,31 @@ block variables
             ['about', 'Обо мне'],
             ['blog', 'Блог']
         ]
+    - 
+        var navAuto = [
+            ['index', 'На главную'],
+            ['enter', 'Войти'],
+        ]
 
 block content
     .desert
     .wrapper
-        .main-block
-            .main-block__info
-                .main-block__user
-                    include ../common/user.pug
-                include ../common/socials.pug
-            nav.nav-block
-                ul.nav-block__list
-                    each item in nav
-                        li.nav-block__item 
-                            a(href="./"+item[0]+".html") #{item[1]}
+        .flip-container(ontouchstart="this.classList.toggle('hover');")
+            .flipper
+                .front
+                    .main-block
+                        .main-block__info
+                            .main-block__user
+                                include ../common/user.pug
+                            include ../common/socials.pug
+                        nav.nav-block
+                            ul.nav-block__list
+                                each item in nav
+                                    li.nav-block__item 
+                                        a(href="./"+item[0]+".html") #{item[1]}
+                .back    
+                    .main-block
+                        include ../common/authorization-form.pug 
         .authorization
             a.authorization__btn(href="#") Авторизоваться
         .copyright

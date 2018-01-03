@@ -15,37 +15,91 @@
     <div class="main-wrapper">
       <div class="desert"></div>
       <div class="wrapper">
-        <div class="main-block">
-          <div class="main-block__info">
-            <div class="main-block__user">
-              <div class="user">
-                <div class="user__img" style="background-image: url(assets/images/photo.jpg); background-position: 50% 38%;"><img class="user__pic visually-hidden" src="assets/images/photo.jpg" alt="Аватар"></div>
-                <h1 class="user__title">Мария Молчанова</h1>
-                <div class="user__info">Личный сайт веб разработчика</div>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="main-block">
+                <div class="main-block__info">
+                  <div class="main-block__user">
+                    <div class="user">
+                      <div class="user__img" style="background-image: url(assets/images/photo.jpg); background-position: 50% 38%;"><img class="user__pic visually-hidden" src="assets/images/photo.jpg" alt="Аватар"></div>
+                      <h1 class="user__title">Мария Молчанова</h1>
+                      <div class="user__info">Личный сайт веб разработчика</div>
+                    </div>
+                  </div>
+                  <ul class="socials-list">
+                    <li class="socials__item"><a class="socials__link" href="vk" target="_blank">
+                        <svg class="socials__icon" width="30" height="25">
+                          <use xlink:href="assets/images/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="github" target="_blank">
+                        <svg class="socials__icon" width="30" height="25">
+                          <use xlink:href="assets/images/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="in" target="_blank">
+                        <svg class="socials__icon" width="30" height="25">
+                          <use xlink:href="assets/images/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+                <nav class="nav-block">
+                  <ul class="nav-block__list">
+                    <li class="nav-block__item"> <a href="./my-works.html">Мои работы</a></li>
+                    <li class="nav-block__item"> <a href="./about.html">Обо мне</a></li>
+                    <li class="nav-block__item"> <a href="./blog.html">Блог</a></li>
+                  </ul>
+                </nav>
               </div>
             </div>
-            <ul class="socials-list">
-              <li class="socials__item"><a class="socials__link" href="vk" target="_blank">
-                  <svg class="socials__icon" width="30" height="25">
-                    <use xlink:href="assets/images/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="github" target="_blank">
-                  <svg class="socials__icon" width="30" height="25">
-                    <use xlink:href="assets/images/sprite.svg#github"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="in" target="_blank">
-                  <svg class="socials__icon" width="30" height="25">
-                    <use xlink:href="assets/images/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul>
+            <div class="back">   
+              <div class="main-block">
+                <div class="authorization-form__wrap">
+                  <form class="authorization-form__elem" action="server.php" method="post" id="contact-form">
+                    <div class="authorization-form__content">
+                      <h2 class="subtitle-dec authorization-form__subtitle">Авторизуйтесь</h2>
+                      <div class="authorization-form__input-block">
+                        <div class="authorization-form__input-img">
+                          <svg class="authorization-form__input-ico" height="15" width="15">
+                            <use xlink:href="assets/images/sprite.svg#login"></use>
+                          </svg>
+                        </div>
+                        <input class="authorization-form__input" type="text" id="login" name="login" placeholder="Логин">
+                      </div>
+                      <div class="authorization-form__input-block">
+                        <div class="authorization-form__input-img">
+                          <svg class="authorization-form__input-ico" height="15" width="15">
+                            <use xlink:href="assets/images/sprite.svg#password"></use>
+                          </svg>
+                        </div>
+                        <input class="authorization-form__input" type="password" id="password" name="password" placeholder="Пароль">
+                      </div>
+                      <div class="authorization-form__chek-block">
+                        <input class="authorization-form__chek-elem visually-hidden" type="checkbox" id="man" name="man" value="1" checked="checked">
+                        <label class="authorization-form__chek-label" for="man">Я человек</label>
+                      </div>
+                      <div class="authorization-form__radio-name">Вы точно не робот?</div>
+                      <div class="authorization-form__radio-block">
+                        <div class="authorization-form__radio">
+                          <input class="authorization-form__radio-elem visually-hidden" type="radio" id="robot-yes" name="robot" value="1" checked="checked">
+                          <label class="authorization-form__radio-label" for="robot-yes">Да</label>
+                        </div>
+                        <div class="authorization-form__radio">
+                          <input class="authorization-form__radio-elem visually-hidden" type="radio" id="robot-no" name="robot" value="0">
+                          <label class="authorization-form__radio-label" for="robot-no">Не уверен</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <nav class="authorization-nav">
+                  <ul class="authorization-nav__list">
+                    <li class="authorization-nav__item"> <a href="./index.html">На главную</a></li>
+                    <li class="authorization-nav__item"> <a href="./enter.html">Войти</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
           </div>
-          <nav class="nav-block">
-            <ul class="nav-block__list">
-              <li class="nav-block__item"> <a href="./my-works.html">Мои работы</a></li>
-              <li class="nav-block__item"> <a href="./about.html">Обо мне</a></li>
-              <li class="nav-block__item"> <a href="./blog.html">Блог</a></li>
-            </ul>
-          </nav>
         </div>
         <div class="authorization"><a class="authorization__btn" href="#">Авторизоваться</a></div>
         <div class="copyright">
