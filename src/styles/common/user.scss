@@ -17,6 +17,10 @@
     &--min {
         margin-bottom: 20px;
     }
+
+    @include phones {
+        margin-bottom: 21px;
+    }
 }
 
 .user__pic {
@@ -26,6 +30,10 @@
 .user__title {
     font-weight: 500;
     font-size: 28px;
+
+    @include phones {
+        font-size: 21px;
+    }
 
     &--header {
         font-size: 35px;
@@ -41,10 +49,27 @@
         font: 500 63px 'sansus_webissimo';
         margin: -15px;
     
+        &:before {
+            content: url('../images/svg_icons/dots3LeftWhite.svg');
+            margin: 0 10px 20px 5px;
+        }
+    
+        &:after {
+           content: url('../images/svg_icons/dots3RightWhite.svg');
+           margin: 0 5px 20px 10px;
+        }
+
         @include phones {
             margin-top: -3px;
             margin-bottom: -10px;
             font-size: 35px;
+        
+            &:before {
+                margin: 0 10px 10px 5px;
+            }
+            &:after {
+               margin: 0 5px 10px 10px;
+            }
         }
     }
 
@@ -58,7 +83,7 @@
 
     @include phones {
         font-size: 14px;
-        max-width: 200px;
+        max-width: 210px;
         line-height: 2;
         text-align: center;
     }
