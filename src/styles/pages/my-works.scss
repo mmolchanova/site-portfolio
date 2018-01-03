@@ -19,9 +19,10 @@
 
     @include tablets {
         height: 1015px;
+        flex-wrap: nowrap;
     }
 
-    @include tablets {
+    @include phones {
         height: 567px;
     }
 }

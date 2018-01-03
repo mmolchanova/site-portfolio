@@ -21,6 +21,7 @@
 
 .footer__wrap {
     display: flex;
+    width: 100%;
 
     @include tablets {
         justify-content: center; 

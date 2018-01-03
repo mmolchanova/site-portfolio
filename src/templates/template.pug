@@ -16,6 +16,6 @@ html
     body
         .main-wrapper
             block content
-            if title != 'Добро пожаловать'
+            if (title != 'Добро пожаловать') && (title != 'Авторизация')
                 include common/menu.pug
                 include common/footer.pug

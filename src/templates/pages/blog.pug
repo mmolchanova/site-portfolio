@@ -13,7 +13,7 @@ block content
                 .user
                     .user__img.user__img--min(style="background-image: url(assets/images/photo.jpg); background-position: 50% 38%;")
                         img.user__pic.visually-hidden(src="assets/images/photo.jpg" alt="Аватар")  
-                    h1.user__title--blog.title-dec Блог
+                    h1.user__title.user__title--blog.title-dec Блог
                     .user__info Статьи, которые я написала (на самом деле нет)
             svg.header__text.header__text--min(height="250")
                     use(xlink:href="assets/images/sprite.svg#blog_header")
@@ -29,8 +29,8 @@ block content
             .blog__nav.nav-blog
                 ul.nav-blog__list
                     each item in navBlog
-                                li.nav-blog__item
-                                    a.nav-blog__link(href="") #{item}
+                        li.nav-blog__item
+                            a.nav-blog__link(href="") #{item}
             .blog__content
                 ul.blog__list
                     li.blog__item
