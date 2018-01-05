@@ -7,7 +7,9 @@ const PATHS = {
 }
 
 const config = {
-    entry: PATHS.source + '/common/map/map.js',
+    // entry: {
+    //     map: PATHS.source + '/index.js'
+    // },
     output: {
         filename: 'bundle.js'
     },

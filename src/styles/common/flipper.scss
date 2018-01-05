@@ -1,11 +1,11 @@
 .flip-container {
     perspective: 1000;
 }
-    
-.flip-container:hover .flipper, .flip-container.hover .flipper {
+
+.active {
     transform: rotateY(180deg);
 }
-    
+
 .flip-container, .front, .back {
     width: 380px;
     height: 395px;

@@ -17,9 +17,9 @@ block variables
 block content
     .desert
     .wrapper
-        .flip-container(ontouchstart="this.classList.toggle('hover');")
+        .flip-container
             .flipper
-                .front
+                .my-front.front
                     .main-block
                         .main-block__info
                             .main-block__user
@@ -30,7 +30,7 @@ block content
                                 each item in nav
                                     li.nav-block__item 
                                         a(href="./"+item[0]+".html") #{item[1]}
-                .back    
+                .my-back.back    
                     .main-block
                         include ../common/authorization-form.pug 
         .authorization
@@ -39,3 +39,6 @@ block content
             ul.copyright__list
                 each item in ['© Мария Молчанова', 'создано с любовью в LoftSchool', '2018']
                     li.copyright__item #{item}
+
+
+//- (ontouchstart="this.classList.toggle('hover');")

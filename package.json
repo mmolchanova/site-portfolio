@@ -20,11 +20,13 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-webpack": "^1.5.0",
     "jquery": "^3.2.1",
-    "uglifyjs-webpack-plugin": "^1.1.2"
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack --watch",
+    "serv": "static build"
   },
   "keywords": [],
   "author": "",

@@ -8,16 +8,17 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
-    <script src="./assets/scripts/bundle.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/scripts/bundle.js" defer></script>
   </head>
   <body>
     <div class="main-wrapper">
       <div class="desert"></div>
       <div class="wrapper">
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flip-container">
           <div class="flipper">
-            <div class="front">
+            <div class="my-front front">
               <div class="main-block">
                 <div class="main-block__info">
                   <div class="main-block__user">
@@ -51,7 +52,7 @@
                 </nav>
               </div>
             </div>
-            <div class="back">   
+            <div class="my-back back">   
               <div class="main-block">
                 <div class="authorization-form__wrap">
                   <form class="authorization-form__elem" action="server.php" method="post" id="contact-form">
