@@ -8,11 +8,22 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/scripts/bundle.js" defer></script>
   </head>
-  <body>
+  <body class="overflow">
+    <div class="preloader">
+      <div class="preloader__wrapper">
+        <svg class="preloader__circle-block" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" width="120px" height="120px" enable-background="new 0 0 40.043 55.633" xml:space="preserve">
+          <circle class="preloader__circle preloader__circle--first" cx="20.021" cy="6" r="6"></circle>
+          <circle class="preloader__circle preloader__circle--second" cx="20.021" cy="6" r="4.5"></circle>
+          <circle class="preloader__circle preloader__circle--third" cx="20.021" cy="6" r="3"></circle>
+        </svg>
+        <div class="preloader__counter" id="counter" transform="matrix(1 0 0 1 0 47.8398)" font-family="'ArialMT'" font-size="24">0</div>
+      </div>
+    </div>
     <div class="main-wrapper">
       <div class="desert"></div>
       <div class="wrapper">
@@ -28,19 +39,16 @@
                       <div class="user__info">Личный сайт веб разработчика</div>
                     </div>
                   </div>
-                  <ul class="socials-list">
-                    <li class="socials__item"><a class="socials__link" href="vk" target="_blank">
-                        <svg class="socials__icon" width="30" height="25">
-                          <use xlink:href="assets/images/sprite.svg#vk"></use>
-                        </svg></a></li>
-                    <li class="socials__item"><a class="socials__link" href="github" target="_blank">
-                        <svg class="socials__icon" width="30" height="25">
-                          <use xlink:href="assets/images/sprite.svg#github"></use>
-                        </svg></a></li>
-                    <li class="socials__item"><a class="socials__link" href="in" target="_blank">
-                        <svg class="socials__icon" width="30" height="25">
-                          <use xlink:href="assets/images/sprite.svg#in"></use>
-                        </svg></a></li>
+                  <ul class="socials-list"><a class="socials__link" href="https://vk.com/id7723602" target="_blank">
+                      <svg class="socials__icon" width="30" height="25">
+                        <use xlink:href="assets/images/sprite.svg#vk"></use>
+                      </svg></a><a class="socials__link" href="https://github.com/mmolchanova" target="_blank">
+                      <svg class="socials__icon" width="30" height="25">
+                        <use xlink:href="assets/images/sprite.svg#github"></use>
+                      </svg></a><a class="socials__link" href="#" target="_blank">
+                      <svg class="socials__icon" width="30" height="25">
+                        <use xlink:href="assets/images/sprite.svg#in"></use>
+                      </svg></a>
                   </ul>
                 </div>
                 <nav class="nav-block">

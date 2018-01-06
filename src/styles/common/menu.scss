@@ -1,7 +1,74 @@
-// .menu {
-//     display: none;
-// }
+.menu {
+    min-height: 100%;
+    height: 100vh;
+    width: 0;
+    background-color: $yellow;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: .5s;
+}
+
+.menu--active {
+    width: 100%;
+    display: flex;
+    opacity: 1;
+}
+
+.menu__list {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
 
 .menu__item {
-    color: green;
+    margin: 0;
+    display: flex;
+   
+    @include phones {
+        font: 500 49px 'sansus_webissimo';
+    }
+
+    &:before {
+        content: url('../images/svg_icons/dots3LeftWhite.svg');
+        transition: .3s;
+        margin: -23px 20px 0 10px;
+        opacity: 0;
+    }
+
+    &:after {
+        content: url('../images/svg_icons/dots3RightWhite.svg');
+        transition: .3s;
+        margin: -23px 10px 0 20px;
+        opacity: 0;
+    }
+
+    &:hover:before {
+        content: url('../images/svg_icons/dots3LeftWhite.svg');
+        opacity: 1;
+    }
+
+    &:hover:after {
+        content: url('../images/svg_icons/dots3RightWhite.svg');
+        opacity: 1;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.8;
+        transition: .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 }

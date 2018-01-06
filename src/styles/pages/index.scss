@@ -75,16 +75,16 @@
         color: #fff;
         background-color: $yellow;
         font: 500 16px 'roboto';
-        padding: 11px 30px;
+        padding: 11px 30.5px;
         height: 100%;
 
         @include tablets {
-            padding: 11px 25px;
+            padding: 11px 25.5px;
         }
 
         @include phones {
             font: 400 14px 'roboto';
-            padding: 11px 21px;
+            padding: 11px 21.7px;
         }
     }
 

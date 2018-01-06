@@ -1,6 +1,12 @@
+- 
+    var socials = [
+        ['vk', 'https://vk.com/id7723602'],
+        ['github', 'https://github.com/mmolchanova'],
+        ['in', '#']
+    ]
+
 ul.socials-list
-    each item in ['vk', 'github', 'in']
-        li.socials__item
-            a(href=`${item}` target="_blank").socials__link
+    each item in socials
+            a(href=item[1] target="_blank").socials__link
                 svg.socials__icon(width="30" height="25")
-                    use(xlink:href="assets/images/sprite.svg#"+item)
+                    use(xlink:href="assets/images/sprite.svg#"+item[0])

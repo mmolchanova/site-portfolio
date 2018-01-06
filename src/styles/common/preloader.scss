@@ -1,0 +1,72 @@
+.preloader {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url('../images/desert_prel_bg.jpg') center center / cover no-repeat;
+
+  &--hidden {
+    display: none;
+  }
+}   
+
+.preloader__wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;      
+}
+
+.preloader__counter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.preloader__circle-block {
+  fill: #fff;
+}
+
+.preloader__circle {
+  z-index: 200;
+  transform-origin: 60px 60px;
+  transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+	animation: orbit 5.22s infinite;
+  -o-animation: orbit 5.22s infinite;
+  -webkit-animation: orbit 5.22s infinite;
+  -moz-animation: orbit 5.22s infinite;
+
+  &--first {
+    animation-delay: 0.45s;
+		-o-animation-delay: 0.45s;
+		-ms-animation-delay: 0.45s;
+		-webkit-animation-delay: 0.45s;
+		-moz-animation-delay: 0.45s;
+  }
+  &--second {
+    animation-delay: 0.68s;
+		-o-animation-delay: 0.68s;
+		-ms-animation-delay: 0.68s;
+		-webkit-animation-delay: 0.68s;
+		-moz-animation-delay: 0.68s;
+  }
+  &--third {
+    animation-delay: 0.92s;
+		-o-animation-delay: 0.92s;
+		-ms-animation-delay: 0.92s;
+		-webkit-animation-delay: 0.92s;
+		-moz-animation-delay: 0.92s;
+  }
+}
+  

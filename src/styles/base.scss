@@ -28,7 +28,8 @@ ul {
     width: 1px !important; 
     overflow: hidden;
   }
-  
+
+
 body {
   font: 400 16px 'roboto';
 
@@ -38,5 +39,15 @@ body {
 }
 
 .main-wrapper {
-  position: relative;   
+  position: relative; 
+  visibility: hidden;    
+
+ &--loaded {
+    visibility: initial;
+  }
+}
+
+.overflow {
+  overflow: hidden; 
+
 }
