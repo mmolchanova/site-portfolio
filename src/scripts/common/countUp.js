@@ -7,11 +7,11 @@
       root.CountUp = factory();
     }
   })(this, function(require, exports, module) {
-    
-    
     /*
+    
         countUp.js
         by @inorganik
+    
     */
   
     // target = id of html element or var of previously selected html element where counting occurs

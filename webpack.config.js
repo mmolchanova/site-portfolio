@@ -3,19 +3,29 @@ const UglifyJSPlagin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 const PATHS = {
-    source: path.join(__dirname, 'src/scripts')
+    source: path.join(__dirname, 'src/scripts'),
+    build: path.join(__dirname, 'build/assets/scripts/')
 }
 
 const config = {
-    // entry: {
-    //     map: PATHS.source + '/index.js'
-    // },
+    entry: {
+        index: PATHS.source + '/index.js',
+        blog: PATHS.source + '/blog.js',
+        my_works: PATHS.source + '/my_works.js',
+        about: PATHS.source + '/about.js',
+        authorization: PATHS.source + '/authorization.js'
+    },
     output: {
-        filename: 'bundle.js'
+        path: PATHS.build,
+        filename: './[name].js'
     },
     plugins: [
         new UglifyJSPlagin({
             sourceMap: true
+        }),
+        new webpack.ProvidePlugin ({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 };

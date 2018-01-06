@@ -36,6 +36,10 @@ body {
   @include tablets {
     font: 400 14px 'roboto';
   }
+
+    &::-webkit-scrollbar { 
+      display: none; 
+  }
 }
 
 .main-wrapper {

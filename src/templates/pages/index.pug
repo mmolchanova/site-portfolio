@@ -4,7 +4,7 @@ block variables
     - var title = 'Добро пожаловать'
     - 
         var nav = [
-            ['my-works', 'Мои работы'],
+            ['my_works', 'Мои работы'],
             ['about', 'Обо мне'],
             ['blog', 'Блог']
         ]
@@ -13,6 +13,9 @@ block variables
             ['index', 'На главную'],
             ['enter', 'Войти'],
         ]
+
+block scripts
+    script(src="./assets/scripts/index.js" defer)
 
 block content
     .desert
@@ -39,6 +42,3 @@ block content
             ul.copyright__list
                 each item in ['© Мария Молчанова', 'создано с любовью в LoftSchool', '2018']
                     li.copyright__item #{item}
-
-
-//- (ontouchstart="this.classList.toggle('hover');")

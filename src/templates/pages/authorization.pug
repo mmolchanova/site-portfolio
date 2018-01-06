@@ -4,7 +4,7 @@ block variables
     - var title = 'Авторизация'
     - 
         var nav = [
-            ['my-works', 'Мои работы'],
+            ['my_works', 'Мои работы'],
             ['about', 'Обо мне'],
             ['blog', 'Блог']
         ]
@@ -13,6 +13,9 @@ block variables
             ['index', 'На главную'],
             ['enter', 'Войти'],
         ]
+
+block scripts
+    script(src="./assets/scripts/authorization.js" defer)
 
 block content
     .desert

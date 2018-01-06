@@ -38,7 +38,7 @@ const paths = {
         dest: 'build/assets/fonts/'
     },
     scripts: {
-        src: 'src/scripts/**/*.js',
+        src: 'src/scripts/*.js',
         dest: 'build/assets/scripts/'
     },
     sprite: {
@@ -101,7 +101,7 @@ function fonts() {
 }
 
 function scripts() {
-    return gulp.src('src/scripts/app.js')
+    return gulp.src('src/scripts/*.js')
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(gulp.dest(paths.scripts.dest));
 }
@@ -132,6 +132,7 @@ exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
 exports.sprite = sprite;
+exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
     clean,

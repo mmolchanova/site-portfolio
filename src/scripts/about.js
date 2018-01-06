@@ -1,6 +1,3 @@
-import flipper from './common/flipper';
-flipper();
-
 import initMap from './common/map';
 window.initMap = initMap;
 
@@ -10,4 +7,4 @@ menu();
 import preloader from './common/preloader';
 preloader();
 
-console.log('test');
+console.log('test about');
