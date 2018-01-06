@@ -17,7 +17,7 @@ export default function initMap() {
         });
 
         var markerIcon = {
-            url: '/assets/images/svg_icons/map_marker.svg',
+            url: './assets/images/svg_icons/map_marker.svg',
             size: new google.maps.Size(45, 55),
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(0, 55)
