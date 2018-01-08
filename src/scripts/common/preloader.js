@@ -40,7 +40,7 @@ export default function(urlBgImages = []) {
     body.removeClass("overflow");
     wrapper.addClass("main-wrapper--loaded");
     preloader.addClass("preloader--hidden");
-  }, 300);
+  }, 3000);
   });
 
 }
