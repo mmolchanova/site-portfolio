@@ -1,0 +1,13 @@
+- 
+    var 
+    sliderItems = [
+        ["#", "1.png", 'some skills1', 'Сайт 1'],
+        ["#", "2.png", 'some skills2', 'Сайт 2'],
+        ["#", "3.png", 'some skills3', 'Сайт 3'],
+        ["#", "4.png", 'some skills4', 'Сайт 4']
+    ]
+
+ul.works-slider__control-list
+    each item in sliderItems
+        li.works-slider__control-item(data-full="./assets/images/slides/"+item[1]+"" data-title=""+item[3]+"" data-skills=""+item[2]+"" data-link=""+item[0]+"")
+            img.works-slider___control-img(src="./assets/images/slides/"+item[1]+"" alt=""+item[3]+"")

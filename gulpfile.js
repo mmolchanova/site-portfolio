@@ -77,8 +77,8 @@ function clean() {
 function watch() {
     gulp.watch(paths.templates.src, templates);
     gulp.watch(paths.styles.src, styles);
-    gulp.watch(paths.styles.src, images);
-    gulp.watch(paths.styles.src, scripts);
+    gulp.watch(paths.images.src, images);
+    gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.sprite.src, sprite);
 }
 

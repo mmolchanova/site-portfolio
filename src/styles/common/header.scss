@@ -1,7 +1,9 @@
 .header {
-  height: 612px;
+  height: 100vh;
+  // height: 612px;
   width: 100%;
   background-image: url('../images/sand.jpg');
+  background-size: cover;
   position: relative;
   overflow: hidden; 
   display: flex;
@@ -11,16 +13,16 @@
   z-index: 1;
 
   &--min {
-    height: 415px;
+    // height: 415px;
     background-position: 0 15%;
   }
 
   @include tablets {
-    height: 512px;
+    // height: 512px;
   }
 
   @include phones {
-    height: 560px;
+    // height: 560px;
   }
 }
 

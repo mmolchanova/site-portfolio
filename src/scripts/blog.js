@@ -1,7 +1,8 @@
 import menu from './common/menu';
-menu();
-
 import preloader from './common/preloader';
-preloader();
 
-console.log('test blog');
+document.addEventListener("DOMContentLoaded", function(e) {
+    preloader();
+    menu();
+    console.log('test blog');
+});

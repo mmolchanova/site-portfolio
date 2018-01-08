@@ -2,6 +2,7 @@ import preloadImages from "./preloadImages";
 import CountUp from "./countUp";
 
 export default function(urlBgImages = []) {
+  
   const preloader = $(".preloader"),
     counter = $(".preloader__counter"),
     wrapper = $(".main-wrapper"),
@@ -39,7 +40,7 @@ export default function(urlBgImages = []) {
     body.removeClass("overflow");
     wrapper.addClass("main-wrapper--loaded");
     preloader.addClass("preloader--hidden");
-  }, 3000);
-
+  }, 300);
   });
+
 }

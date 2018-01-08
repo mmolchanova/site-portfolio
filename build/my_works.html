@@ -9,7 +9,6 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="./assets/styles/app.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/scripts/my_works.js" defer></script>
   </head>
   <body class="overflow">
@@ -71,16 +70,34 @@
         </h1>
         <div class="works__content">
           <div class="works__block">
-            <h2 class="works__subtitle subtitle-dec">Сайт школы онлайн образования</h2>
-            <div class="works__desc">HTML, CSS, JAVASCRIPT</div><a class="works__button" href="#" target="_blank">Посмотреть сайт
-              <svg class="icon" height="20" width="20">
-                <use xlink:href="assets/images/sprite.svg#link"></use>
-              </svg></a>
+            <div class="works__subtitle">
+              <h2 class="subtitle subtitle-dec"></h2>
+            </div>
+            <div class="works__content-desc"></div>
+            <div class="works__content-btn"><a class="works__content-view" href="#" target="_blank">Посмотреть сайт
+                <svg class="icon" height="20" width="20">
+                  <use xlink:href="assets/images/sprite.svg#link"></use>
+                </svg></a></div>
           </div>
-          <div class="works__main"></div>
-          <div class="works__sub-wrap">
-            <div class="works__sub"></div>
-            <div class="works__sub"></div>
+          <div class="works-slider__display"><img class="works-slider__display-pic"></div>
+          <div class="works-slider">
+            <div class="works-slider__controls"><a class="works-slider__control-btn works-slider__control-btn--left" href="#">
+                <ul class="works-slider__control-list">
+                  <li class="works-slider__control-item" data-full="./assets/images/slides/1.png" data-title="Сайт 1" data-skills="some skills1" data-link="#"><img class="works-slider___control-img" src="./assets/images/slides/1.png" alt="Сайт 1"></li>
+                  <li class="works-slider__control-item" data-full="./assets/images/slides/2.png" data-title="Сайт 2" data-skills="some skills2" data-link="#"><img class="works-slider___control-img" src="./assets/images/slides/2.png" alt="Сайт 2"></li>
+                  <li class="works-slider__control-item" data-full="./assets/images/slides/3.png" data-title="Сайт 3" data-skills="some skills3" data-link="#"><img class="works-slider___control-img" src="./assets/images/slides/3.png" alt="Сайт 3"></li>
+                  <li class="works-slider__control-item" data-full="./assets/images/slides/4.png" data-title="Сайт 4" data-skills="some skills4" data-link="#"><img class="works-slider___control-img" src="./assets/images/slides/4.png" alt="Сайт 4"></li>
+                </ul>
+                <div class="works-slider__arrow-box">
+                  <svg class="works-slider__arrow" width="25" height="15">
+                    <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
+                  </svg>
+                </div></a><a class="works-slider__control-btn works-slider__control-btn--right" href="#">
+                <div class="works-slider__arrow-box">
+                  <svg class="works-slider__arrow works-slider__arrow--up" width="25" height="15">
+                    <use xlink:href="assets/images/sprite.svg#arrow_down"></use>
+                  </svg>
+                </div></a></div>
           </div>
         </div>
       </div>
@@ -138,8 +155,16 @@
           </svg>
         </div>
       </div>
-      <nav class="menu">
+      <nav class="menu menu--right">
         <h2 class="menu__title visually-hidden">Меню</h2>
+        <ul class="menu__list">
+          <li class="menu__item title-dec"><a class="menu__link" href="./index.html">Главная</a></li>
+          <li class="menu__item title-dec"><a class="menu__link" href="./about.html">Обо мне</a></li>
+          <li class="menu__item title-dec"><a class="menu__link" href="./my_works.html">Мои работы</a></li>
+          <li class="menu__item title-dec"><a class="menu__link" href="./blog.html">Блог</a></li>
+        </ul>
+      </nav>
+      <nav class="menu menu--left">
         <ul class="menu__list">
           <li class="menu__item title-dec"><a class="menu__link" href="./index.html">Главная</a></li>
           <li class="menu__item title-dec"><a class="menu__link" href="./about.html">Обо мне</a></li>

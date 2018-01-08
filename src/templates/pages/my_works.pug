@@ -6,6 +6,7 @@ block variables
 block scripts
     script(src="./assets/scripts/my_works.js" defer)
 
+
 block content
     .header
         .header__socials
@@ -30,15 +31,26 @@ block content
                 use(xlink:href="assets/images/sprite.svg#works_header")
         .works__content
             .works__block
-                h2.works__subtitle.subtitle-dec Сайт школы онлайн образования
-                .works__desc HTML, CSS, JAVASCRIPT
-                a.works__button(href="#" target="_blank") Посмотреть сайт
-                    svg.icon(height="20" width="20")
-                        use(xlink:href="assets/images/sprite.svg#link")
-            .works__main
-            .works__sub-wrap
-                .works__sub
-                .works__sub
+                .works__subtitle
+                    h2.subtitle.subtitle-dec
+                .works__content-desc
+                .works__content-btn
+                    a.works__content-view(href="#" target="_blank") Посмотреть сайт
+                        svg.icon(height="20" width="20")
+                            use(xlink:href="assets/images/sprite.svg#link")
+            .works-slider__display
+                img.works-slider__display-pic
+            .works-slider
+                .works-slider__controls
+                    a.works-slider__control-btn.works-slider__control-btn--left(href="#")
+                        include ../common/slider.pug
+                        .works-slider__arrow-box
+                            svg.works-slider__arrow(width="25" height="15")
+                                use(xlink:href="assets/images/sprite.svg#arrow_down")
+                    a.works-slider__control-btn.works-slider__control-btn--right(href="#")
+                        .works-slider__arrow-box
+                            svg.works-slider__arrow.works-slider__arrow--up(width="25" height="15")
+                                use(xlink:href="assets/images/sprite.svg#arrow_down")
 
     .my-block
         h1.my-block__title.title-dec Что обо мне говорят

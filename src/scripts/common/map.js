@@ -2,7 +2,7 @@ import mapStyle from "./mapStyle";
 
 export default function initMap() {
         var centerPos = {lat: 55.031, lng: 82.910};
-        var markerPos = {lat: 55.046, lng: 82.910};
+        var markerPos = {lat: 55.046416, lng: 82.910360};
         
         if (document.documentElement.clientWidth < 481) {
             centerPos = {lat: 55.040, lng: 82.910};
@@ -18,9 +18,9 @@ export default function initMap() {
 
         var markerIcon = {
             url: './assets/images/svg_icons/map_marker.svg',
-            size: new google.maps.Size(45, 55),
+            size: new google.maps.Size(90, 110),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 55)
+            anchor: new google.maps.Point(0, 0)
         };
 
         var marker = new google.maps.Marker({position: markerPos, map: map, icon: markerIcon});

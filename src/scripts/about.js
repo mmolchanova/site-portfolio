@@ -1,10 +1,11 @@
-import initMap from './common/map';
-window.initMap = initMap;
-
-import menu from './common/menu';
-menu();
-
 import preloader from './common/preloader';
-preloader();
+import initMap from './common/map';
+import menu from './common/menu';
 
-console.log('test about');
+document.addEventListener("DOMContentLoaded", function(e) {
+    preloader();
+    menu();
+    window.initMap = initMap;
+
+    console.log('test about');
+});

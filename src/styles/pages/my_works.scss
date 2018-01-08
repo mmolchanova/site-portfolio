@@ -61,7 +61,7 @@
     }
 }
 
-.works__subtitle {
+.subtitle {
     max-width: 400px;
     margin-top: -10px;
     margin-bottom: 30px;
@@ -79,13 +79,14 @@
     }
 }
 
-.works__main {
+.works-slider__display {
     width: 50%;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color:  #ebe5db;
     height: 75%;
 
     @include tablets {
@@ -99,10 +100,22 @@
     }
 }
 
-.works__sub-wrap {
-    background-color: red;
+.works-slider__display-pic {
+    max-width: 70%;
+    max-height: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.works-slider {
     height: 25%;
     width: 50%;
+    display: flex;
+    position: relative;
 
     @include tablets {
         order: 3;
@@ -115,7 +128,65 @@
     }
 }
 
-.works__desc {
+.works-slider__controls {
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.works-slider__control-btn {
+    display: block;
+    text-decoration: none;
+    width: 50%;
+    float: left;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    outline: none !important;
+    background-color: $bg;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background-color: rgba(182,180,174,0.7);
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+     
+    &--left .works-slider__control-item {
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+    }
+ 
+    &--right .works-slider__control-item {
+        position: absolute;
+        bottom: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        top: 100%;       
+    }
+
+}
+
+
+.works__content-desc {
     display: inline-flex;
     width: 420px;
     height: 53px;
@@ -136,7 +207,7 @@
     }
 }
 
-.works__button {
+.works__content-view {
     text-decoration: none;
     color: #fff;
     background-color: $yellow;
@@ -153,6 +224,12 @@
     @include phones {
         font-size: 14px;
     }
+}
+
+
+.works-slider__control-item.active {
+    transform: none !important;
+    top: 0;
 }
 
 .my-block {
@@ -443,17 +520,36 @@
     }
 }
 
-.my-block__arrow {
+.works-slider__arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
     position: absolute;
-    bottom: 210px;
+    top: 50%;
     left: 50%;
-    z-index: 10;
+    transform: translate(-50%, -50%);
+    z-index: 10;   
 
-    @include tablets {
-        bottom: 270px;
+    &:hover .works-slider__arrow {
+        transform: translateY(20px);
     }
 
-    @include phones {
-        bottom: 370px;
+    &:hover .works-slider__arrow--up {
+        transform: translateY(-20px) rotate(180deg);
     }
+}
+
+
+.works-slider__arrow {
+
+
+    fill: #fff;
+    transition: .5s;
+
+    &--up {
+        transform: rotate(180deg)
+    }
+
 }

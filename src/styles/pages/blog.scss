@@ -210,11 +210,12 @@
     }
 }
 
-.blog__desc-img {
+.blog__desc-snippet {
+    background-size: contain;
     max-width: 100%;
-    margin-top: -5px;
+    min-height: 110px;
 
     @include phones {
-        max-width: initial;
+        min-height: 70px;
     }
 }

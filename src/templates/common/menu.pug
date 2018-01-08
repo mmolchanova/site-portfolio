@@ -1,13 +1,19 @@
 - 
-    var menu__items = [
+    var 
+    menu__items = [
         ['index', 'Главная'],
         ['about', 'Обо мне'],
         ['my_works', 'Мои работы'],
         ['blog', 'Блог']
     ]
 
-nav.menu
+nav.menu.menu--right
     h2.menu__title.visually-hidden Меню
+    ul.menu__list
+        each item in menu__items
+            li.menu__item.title-dec
+                a.menu__link(href="./"+item[0]+".html") #{item[1]}
+nav.menu.menu--left
     ul.menu__list
         each item in menu__items
             li.menu__item.title-dec
