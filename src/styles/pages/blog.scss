@@ -39,18 +39,66 @@
     }  
 }
 
+.blog__left {
+    width: 25vw;   
+    position: relative; 
+
+    @include smallDesktop {
+        width: 26vw;
+    }
+
+    @include tablets {
+        position: relative;
+        width: 0;
+    //     background-color: $yellow;
+    //     top: 0;
+    //     left: 0;
+    //     min-height: 100%;
+     }
+}
+
 .blog__nav {
-    width: 25%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    @include smallDesktop {
-        width: 26%;
+    @include tablets {
+        position: absolute;
+        width: 26vw;
+        background-color: $yellow;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        transform: translateX(-100%);
+        transition: .5s;
     }
 
+    &--visually {
+        transform: translateX(0);
+    }
+
+    &:hover {
+        transform: translateX(0);
+    }
+}
+
+.blog__nav.fixed {
+    width: 25vw;    
+    position: fixed;
+    top: 0;
+    left: 0;    
+
+    @include smallDesktop {
+        width: 26vw;
+    }    
+   
     @include tablets {
-        display: none;
+        display: flex;
+
+        .blog__circle-block{
+            opacity: 1;
+        }
     }
 }
 
@@ -74,14 +122,21 @@
             color: $rust;
         }
     }
-//проверка
-    &:first-child {
-        border-right: 3px solid $rust;
-        
+
+    @include tablets {
         .nav-blog__link {
-            font: 700 16px 'roboto';
-            color: $rust;
+            font: 300 16px 'roboto';
+            color: #fff;
+            opacity: 0.8;
         }
+
+        &--active {
+            border: none;            
+            .nav-blog__link {
+                opacity: 1;
+                font: 700 16px 'roboto';
+            }
+        }        
     }
 }
 
@@ -91,6 +146,21 @@
     display: inline-flex;
     text-align: right;
     margin: 11px 16px;   
+}
+
+.blog__circle-block {
+    width: 25px;
+    height: 50px;
+    opacity: 0;
+    position: absolute;    
+    right: 0;
+    top: 50%;
+    transform: translateX(80%);
+    transition: .5s;
+}
+
+.blog__circle {
+    fill: $yellow;
 }
 
 .blog__content {

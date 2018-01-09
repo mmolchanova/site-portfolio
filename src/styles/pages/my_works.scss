@@ -228,7 +228,7 @@
 
 
 .works-slider__control-item.active {
-    transform: none !important;
+    transform: none;
     top: 0;
 }
 
@@ -543,8 +543,6 @@
 
 
 .works-slider__arrow {
-
-
     fill: #fff;
     transition: .5s;
 
@@ -552,4 +550,28 @@
         transform: rotate(180deg)
     }
 
+}
+
+.letter-span {
+    display: inline-block;
+    opacity: 0;
+    transition: .3s;
+} 
+
+.letter-span.active {
+    opacity: 1;
+    transform: none;
+}
+
+.my-block__arrow {
+    position: absolute;
+    bottom: 200px;
+
+    @include tablets {
+        bottom: 300px;
+    }
+
+    @include phones {
+        bottom: 400px;
+    }
 }
