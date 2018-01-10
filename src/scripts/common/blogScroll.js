@@ -89,12 +89,12 @@ export default function() {
   $('.blog').on('click', function (e) {
     if (document.documentElement.clientWidth < 769) {    
       e.preventDefault();
-      console.log(e.target);
-      console.log(e.currentTarget);
+      // console.log(e.target);
+      // console.log(e.currentTarget);
 
-      let elem = $(e.target);
+      let elem = $(e.target).closest('.blog__circle');
 
-      if (elem.hasClass('blog__circle')) {
+      if (elem.length) {
         tabletsMenu.addClass('blog__left--visually');
       } else {
         tabletsMenu.removeClass('blog__left--visually');
