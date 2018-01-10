@@ -1,11 +1,11 @@
 export default function() {
 
-let scrollMenu = (function() {
+  let scrollMenu = (function() {
   const $news = $('.blog__item');
   const $item = $('.nav-blog__item');
   const $wrapMenu = $('.blog__nav');
   let positionArticle = [];
-  let offsetHeight = 0; // смещение реагирования на сменю меню
+  let offsetHeight = 400;
 
   let _setPositionArticle = function(element) {
     const len = element.length;
@@ -44,7 +44,7 @@ let scrollMenu = (function() {
   };
 
   let _clickMenu = function(e) {
-    let $element = $(e.target);
+    let $element = $(e.target).closest('.nav-blog__item');
     let index = $element.index();
     let sectionOffset = positionArticle[index].top;
 
@@ -54,7 +54,7 @@ let scrollMenu = (function() {
       {
         scrollTop: sectionOffset
       },
-      1000,
+      600,
       () => {
         $element.addClass('nav-blog__item--active');
         $(document).on('scroll', _scrollPage);
@@ -63,7 +63,7 @@ let scrollMenu = (function() {
   };
 
   let addListener = function() {
-    $('.menu').on('click', _clickMenu);
+    $('.blog__nav').on('click', _clickMenu);
     $(document).on('scroll', _scrollPage);
     $(document).on('scroll', _scrollPageFixMenu);
 
@@ -83,6 +83,25 @@ let scrollMenu = (function() {
     init: addListener
   };
 })();
+
+  let tabletsMenu = $('.blog__left');
+
+  $('.blog').on('click', function (e) {
+    if (document.documentElement.clientWidth < 769) {    
+      e.preventDefault();
+      console.log(e.target);
+      console.log(e.currentTarget);
+
+      let elem = $(e.target);
+
+      if (elem.hasClass('blog__circle')) {
+        tabletsMenu.addClass('blog__left--visually');
+      } else {
+        tabletsMenu.removeClass('blog__left--visually');
+      }
+    }
+  });
+    
 
 console.log(scrollMenu);
 scrollMenu.init();

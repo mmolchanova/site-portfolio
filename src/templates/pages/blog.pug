@@ -37,9 +37,9 @@ block content
     .main.blog__wrap
         .blog
             .blog__left
+                svg.blog__circle-block(viewBox="0 0 25 50")
+                    circle.blog__circle(r="25" cx="0%" cy="50%" fill="none")
                 .blog__nav.nav-blog
-                    svg.blog__circle-block(viewBox="0 0 25 50")
-                        circle.blog__circle(r="25" cx="0%" cy="50%" fill="none")
                     ul.nav-blog__list
                         each item in navBlog
                             li.nav-blog__item

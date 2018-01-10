@@ -48,13 +48,32 @@
     }
 
     @include tablets {
-        position: relative;
-        width: 0;
-    //     background-color: $yellow;
-    //     top: 0;
-    //     left: 0;
-    //     min-height: 100%;
+        position: fixed;
+        background-color: $yellow;
+        top: 0;
+        left: 0;
+        min-height: 100%;
+        transform: translateX(-100%);
+        transition: .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        width: 250px;
      }
+
+    &--visually {
+        @include tablets {
+            transform: translateX(0);
+        }
+
+        .blog__circle-block {
+            @include tablets {
+                opacity: 1;
+            }
+        }
+    }
+
 }
 
 .blog__nav {
@@ -64,23 +83,9 @@
     align-items: center;
 
     @include tablets {
-        position: absolute;
-        width: 26vw;
-        background-color: $yellow;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        transform: translateX(-100%);
-        transition: .5s;
+        width: 100%;
     }
 
-    &--visually {
-        transform: translateX(0);
-    }
-
-    &:hover {
-        transform: translateX(0);
-    }
 }
 
 .blog__nav.fixed {
@@ -95,10 +100,9 @@
    
     @include tablets {
         display: flex;
-
-        .blog__circle-block{
-            opacity: 1;
-        }
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
     }
 }
 
@@ -113,6 +117,13 @@
     border: none;
     margin-bottom: 3px;
     line-height: 1.71;
+    transition: .3s;
+    border-right: 3px solid transparent;
+    font: 400 16px 'roboto';
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &--active {
         border-right: 3px solid $rust;
@@ -121,9 +132,12 @@
             font: 700 16px 'roboto';
             color: $rust;
         }
+
     }
 
     @include tablets {
+        border: none;
+
         .nav-blog__link {
             font: 300 16px 'roboto';
             color: #fff;
@@ -145,18 +159,22 @@
     color: $dark;
     display: inline-flex;
     text-align: right;
-    margin: 11px 16px;   
+    margin: 11px 16px 11px 10px;   
 }
 
 .blog__circle-block {
-    width: 25px;
-    height: 50px;
-    opacity: 0;
-    position: absolute;    
-    right: 0;
-    top: 50%;
-    transform: translateX(80%);
-    transition: .5s;
+    display: none;
+    
+    @include tablets {
+        display: block;
+        width: 25px;
+        height: 50px;
+        position: absolute;    
+        right: 0;
+        top: 50%;
+        transform: translateX(80%);
+        opacity: 0.8;
+    }
 }
 
 .blog__circle {
@@ -281,6 +299,7 @@
 }
 
 .blog__desc-snippet {
+    background: center center no-repeat;
     background-size: contain;
     max-width: 100%;
     min-height: 110px;

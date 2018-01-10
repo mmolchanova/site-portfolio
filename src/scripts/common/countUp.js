@@ -14,14 +14,14 @@
     
     */
   
-    // target = id of html element or var of previously selected html element where counting occurs
+    // target = id of html element or let of previously selected html element where counting occurs
     // startVal = the value you want to begin at
     // endVal = the value you want to arrive at
     // decimals = number of decimal places, default 0
     // duration = duration of animation in seconds, default 2
     // options = optional object of options (see below)
   
-    var CountUp = function(
+    let CountUp = function(
       target,
       startVal,
       endVal,
@@ -29,7 +29,7 @@
       duration,
       options
     ) {
-      var self = this;
+      let self = this;
       self.version = function() {
         return "1.9.3";
       };
@@ -49,7 +49,7 @@
   
       // extend default options with passed options object
       if (options && typeof options === "object") {
-        for (var key in self.options) {
+        for (let key in self.options) {
           if (options.hasOwnProperty(key) && options[key] !== null) {
             self.options[key] = options[key];
           }
@@ -66,9 +66,9 @@
       // make sure requestAnimationFrame and cancelAnimationFrame are defined
       // polyfill for browsers without native support
       // by Opera engineer Erik Möller
-      var lastTime = 0;
-      var vendors = ["webkit", "moz", "ms", "o"];
-      for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      let lastTime = 0;
+      let vendors = ["webkit", "moz", "ms", "o"];
+      for (let x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
         window.requestAnimationFrame =
           window[vendors[x] + "RequestAnimationFrame"];
         window.cancelAnimationFrame =
@@ -77,9 +77,9 @@
       }
       if (!window.requestAnimationFrame) {
         window.requestAnimationFrame = function(callback, element) {
-          var currTime = new Date().getTime();
-          var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-          var id = window.setTimeout(function() {
+          let currTime = new Date().getTime();
+          let timeToCall = Math.max(0, 16 - (currTime - lastTime));
+          let id = window.setTimeout(function() {
             callback(currTime + timeToCall);
           }, timeToCall);
           lastTime = currTime + timeToCall;
@@ -93,7 +93,7 @@
       }
   
       function formatNumber(num) {
-        var neg = num < 0,
+        let neg = num < 0,
           x,
           x1,
           x2,
@@ -170,7 +170,7 @@
   
       // Print value to target
       self.printValue = function(value) {
-        var result = self.options.formattingFn(value);
+        let result = self.options.formattingFn(value);
   
         if (self.d.tagName === "INPUT") {
           this.d.value = result;
@@ -187,7 +187,7 @@
         }
   
         self.timestamp = timestamp;
-        var progress = timestamp - self.startTime;
+        let progress = timestamp - self.startTime;
         self.remaining = self.duration - progress;
   
         // to ease or not to ease

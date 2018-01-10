@@ -1,8 +1,8 @@
 export default function() {
 
-    var aviatitle = {
+    let aviatitle = {
         generate: function (string, block) {
-          var wordsArray = string.split(' '),
+          let wordsArray = string.split(' '),
             stringArray = string.split(''),
             sentence = [],
             word = '';
@@ -11,15 +11,15 @@ export default function() {
           block.text('');
     
           wordsArray.forEach(function (currentWord) {
-            var wordsArray = currentWord.split('');
+            let wordsArray = currentWord.split('');
     
             wordsArray.forEach(function (letter) {
-              var letterHtml = '<span class="letter-span">' + letter + '</span>';
+              let letterHtml = '<span class="letter-span">' + letter + '</span>';
     
               word += letterHtml;
             });
     
-            var wordHTML = '<span class="letter-word">' + word + '</span>'
+            let wordHTML = '<span class="letter-word">' + word + '</span>'
     
             sentence.push(wordHTML);
             word = '';
@@ -27,10 +27,10 @@ export default function() {
     
           block.append(sentence.join(' '));
     
-          // анимация появления
-          var
-            letters = block.find('.letter-span'), // найдем все наши буквы
-            duration = 500 / stringArray.length; // находим длительность для каждой буквы
+          
+          let
+            letters = block.find('.letter-span'), 
+            duration = 500 / stringArray.length; 
     
           $.each(letters, function (item, elem) {
             setTimeout(function () {
@@ -42,8 +42,8 @@ export default function() {
       }
 
 
-    var Slider = function (container) {
-        var nextBtn = container.find('.works-slider__control-btn--left'),// левая  кнопка
+    let Slider = function (container) {
+        let nextBtn = container.find('.works-slider__control-btn--left'),// левая  кнопка
         prevBtn = container.find('.works-slider__control-btn--right'), // правая кнопка
         items = nextBtn.find('.works-slider__control-item'), // слайды
         display = container.find('.works-slider__display'), // Витрина слайдера
@@ -55,13 +55,13 @@ export default function() {
         flag = true;
         
     
-        var timeout;
+        let timeout;
     
         this.counter = 0;
     
         // private Генерация разметки кнопки следующий слайд
-        var generateMarkups = function () {
-        var list = nextBtn.find('.works-slider__control-list'),
+        let generateMarkups = function () {
+        let list = nextBtn.find('.works-slider__control-list'),
             markups = list.clone();
     
         prevBtn
@@ -72,8 +72,8 @@ export default function() {
             // .addClass('active');
         }
         // Вытащить данные из дата атрибутов для левой части слайдера
-        var getDataArrays = function () {
-        var dataObject = {
+        let getDataArrays = function () {
+        let dataObject = {
             pics: [],
             title: [],
             skills: [],
@@ -81,7 +81,7 @@ export default function() {
         };
     
         $.each(items, function () {
-            var $this = $(this);
+            let $this = $(this);
     
             dataObject
             .pics
@@ -100,8 +100,8 @@ export default function() {
         return dataObject;
         }
     
-        var slideInLeftBtn = function (slide) {
-        var reqItem = items.eq(slide - 1),
+        let slideInLeftBtn = function (slide) {
+        let reqItem = items.eq(slide - 1),
             activeItem = items.filter('.active');
     
         activeItem
@@ -124,8 +124,8 @@ export default function() {
     
         }
     
-        var slideInRightBtn = function (slide) {
-        var items = prevBtn.find('.works-slider__control-item'),
+        let slideInRightBtn = function (slide) {
+        let items = prevBtn.find('.works-slider__control-item'),
             activeItem = items.filter('.active'),
             reqSlide = slide + 1;
     
@@ -133,7 +133,7 @@ export default function() {
             reqSlide = 0;
         }
     
-        var reqItem = items.eq(reqSlide);
+        let reqItem = items.eq(reqSlide);
     
         activeItem
             .stop(true, true)
@@ -154,9 +154,9 @@ export default function() {
             });
         };
     
-        var changeMainPicture = function (slide) {
-        var image = display.find('.works-slider__display-pic');
-        var data = getDataArrays();
+        let changeMainPicture = function (slide) {
+        let image = display.find('.works-slider__display-pic');
+        let data = getDataArrays();
     
         image
             .stop(true, true)
@@ -166,8 +166,8 @@ export default function() {
             });
         }
     
-        var changeTextData = function (slide) {
-        var data = getDataArrays();
+        let changeTextData = function (slide) {
+        let data = getDataArrays();
     
         // название работы
         aviatitle.generate(data.title[slide], title, 'ru');
@@ -181,7 +181,7 @@ export default function() {
     
         // public
         this.setDefaults = function () {
-        var _that = this,
+        let _that = this,
             data = getDataArrays();
         console.log(data);
         // создаем разметку
@@ -210,7 +210,7 @@ export default function() {
         };
     
         this.moveSlide = function (direction) {
-        var _that = this;
+        let _that = this;
         // if (direction === "next") {
         //   if (_that.counter < itemsLength - 1) {
         //     _that.counter++;
@@ -225,7 +225,7 @@ export default function() {
         //   }
         // }
     
-        var directions = {
+        let directions = {
             next: function () {
             // закольцовывание слайдера
             if (_that.counter < itemsLength - 1) {
@@ -265,7 +265,7 @@ export default function() {
         };
     };
     
-    var slider = new Slider($('.works'));
+    let slider = new Slider($('.works'));
     slider.setDefaults();
     
     $('.works-slider__control-btn--left').on('click', function (e) {
