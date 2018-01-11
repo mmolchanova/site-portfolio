@@ -533,11 +533,12 @@
     z-index: 10;   
 
     &:hover .works-slider__arrow {
-        transform: translateY(20px);
+        transform: scale(1.4);
+        opacity: 1;
     }
 
     &:hover .works-slider__arrow--up {
-        transform: translateY(-20px) rotate(180deg);
+        transform: scale(1.4) rotate(180deg);
     }
 }
 
@@ -550,6 +551,12 @@
         transform: rotate(180deg)
     }
 
+}
+
+.letter-word {
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0 5px;
 }
 
 .letter-span {
