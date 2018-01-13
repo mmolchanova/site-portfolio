@@ -1,10 +1,11 @@
 export default function () {
     console.log("skills!");
-    let technologies = $('.about__block--right');
+    let skillsBlock = $('.about__block--right');
     let diagrams = $('.diagram__circle-block');
-    let position = technologies.offset().top - 150;
+    let position = skillsBlock.offset().top - 300;
     let scroll = window.pageYOffset;
-    
+
+
     if (scroll > position) {
         diagrams.addClass('diagram__circle-block--go');
     }
@@ -14,6 +15,8 @@ export default function () {
         if (scroll > position) {
             diagrams.addClass('diagram__circle-block--go');
         }
+    console.log(position);
+    console.log(scroll);
     }   
 
     let addListener = (function() {
