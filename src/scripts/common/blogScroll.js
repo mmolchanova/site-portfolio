@@ -15,7 +15,6 @@ export default function() {
       positionArticle[item].bottom =
         positionArticle[item].top + $(this).innerHeight();
     });
-    // console.log(positionArticle);
   };
 
   let _scrollPageFixMenu = function(e) {
