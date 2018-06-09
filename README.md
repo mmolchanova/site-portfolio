@@ -1,6 +1,6 @@
-# site-portfolio
+# Сайт-портфолио
 
-Выпускной проект для LoftSchool
+Выпускной проект для LoftSchool на курсе "Продвинутая веб-разработка".
 
 http://cy01273.tmweb.ru/portfolio/
 
